@@ -3,21 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogesh Sahu | Data Analytics Portfolio</title>
+    <title>Jogesh Sahu | Premium Data Analytics Portfolio</title>
+    <!-- Importing a modern tech font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
-        header { background-color: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.2em; }
-        header p { font-size: 1.1em; margin-top: 10px; color: #1abc9c; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #1abc9c; padding-bottom: 10px; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 4px solid #1abc9c; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-top: 0; color: #2c3e50; }
-        .tag { display: inline-block; background: #e0f2f1; padding: 5px 12px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; margin-bottom: 10px; color: #00796b; font-weight: bold;}
-        .btn { display: inline-block; background: #2c3e50; color: white; padding: 8px 18px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; font-size: 0.9em;}
-        .btn:hover { background: #34495e; }
+        /* Base Premium Dark Theme */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #0f172a; /* Deep Slate */
+            color: #f8fafc; 
+        }
+
+        /* Header with Gradient Text */
+        header { 
+            padding: 80px 20px 60px; 
+            text-align: center; 
+            background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+            border-bottom: 1px solid #1e293b;
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 3.5em; 
+            font-weight: 900; 
+            /* Gradient text effect */
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+        header p { 
+            font-size: 1.2em; 
+            margin-top: 15px; 
+            color: #94a3b8; 
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Container Layout */
+        .container { 
+            max-width: 1050px; 
+            margin: 0 auto; 
+            padding: 40px 20px 80px; 
+        }
+        
+        h2 { 
+            color: #e2e8f0; 
+            font-size: 1.8em;
+            text-align: center; 
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        /* Grid for Cards */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+
+        /* Premium Card Design */
+        .card { 
+            background: #1e293b; 
+            padding: 30px; 
+            border-radius: 16px; 
+            border: 1px solid #334155;
+            transition: all 0.4s ease; 
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Heavy Hover Effect - Glow & Lift */
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: #38bdf8;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.7), 0 0 20px rgba(56, 189, 248, 0.15); 
+        }
+
+        .card h3 { 
+            margin-top: 0; 
+            color: #f8fafc; 
+            font-size: 1.4em;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            flex-grow: 1;
+            font-size: 0.95em;
+            margin-bottom: 25px;
+        }
+
+        /* Sleek Tags */
+        .tags-container {
+            margin-bottom: 15px;
+        }
+        .tag { 
+            display: inline-block; 
+            background: rgba(56, 189, 248, 0.1); 
+            padding: 6px 14px; 
+            border-radius: 20px; 
+            font-size: 0.8em; 
+            margin-right: 8px; 
+            margin-bottom: 8px; 
+            color: #38bdf8; 
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Modern Full-Width Button */
+        .btn { 
+            display: block; 
+            text-align: center;
+            background: linear-gradient(90deg, #0284c7, #2563eb); 
+            color: white; 
+            padding: 14px 20px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: 600; 
+            font-size: 0.95em;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover { 
+            opacity: 0.9; 
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body>
@@ -36,8 +152,10 @@
             <!-- Repo 1: Banking Transaction Audit -->
             <div class="card">
                 <h3>Banking Transaction Audit System</h3>
-                <span class="tag">TSQL</span>
-                <span class="tag">Power BI</span>
+                <div class="tags-container">
+                    <span class="tag">TSQL</span>
+                    <span class="tag">Power BI</span>
+                </div>
                 <p>Relational database analysis focusing on banking transaction audits and data integrity verification.</p>
                 <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">View Repository</a>
             </div>
@@ -45,8 +163,10 @@
             <!-- Repo 2: HR Attrition -->
             <div class="card">
                 <h3>HR Attrition Data Analytics</h3>
-                <span class="tag">Python</span>
-                <span class="tag">Power BI</span>
+                <div class="tags-container">
+                    <span class="tag">Python</span>
+                    <span class="tag">Power BI</span>
+                </div>
                 <p>End-to-end HR Attrition analysis using Python for Exploratory Data Analysis (EDA) and Power BI for Visualization.</p>
                 <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">View Repository</a>
             </div>
@@ -54,8 +174,10 @@
             <!-- Repo 3: Data Analytics Portfolio -->
             <div class="card">
                 <h3>Data Analytics Portfolio</h3>
-                <span class="tag">HTML</span>
-                <span class="tag">SQL</span>
+                <div class="tags-container">
+                    <span class="tag">HTML</span>
+                    <span class="tag">SQL</span>
+                </div>
                 <p>SQL and Power BI projects focused on E-commerce Sales and Banking Audit Systems.</p>
                 <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">View Repository</a>
             </div>
