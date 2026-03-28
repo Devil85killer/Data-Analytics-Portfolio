@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogesh Sahu | Premium Data Analytics Portfolio</title>
-    <!-- Importing a modern tech font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Jogesh Sahu | Premium Data Portfolio</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Base Premium Dark Theme */
+        /* Modern Premium Dark Theme */
         body { 
             font-family: 'Inter', sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #0f172a; /* Deep Slate */
-            color: #f8fafc; 
+            background-color: #0d1222; /* Deep Black Blue */
+            color: #e2e8f0; 
+            overflow-x: hidden;
         }
 
-        /* Header with Gradient Text */
+        /* Full-Width Header with Subtle Glow */
         header { 
-            padding: 80px 20px 60px; 
+            padding: 70px 20px; 
             text-align: center; 
-            background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
-            border-bottom: 1px solid #1e293b;
+            background: radial-gradient(circle at center, #151d38 0%, #0d1222 100%);
+            border-bottom: 1px solid #222b49;
         }
         header h1 { 
             margin: 0; 
-            font-size: 3.5em; 
+            font-size: 3.2em; 
             font-weight: 900; 
-            /* Gradient text effect */
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            /* Subtle blue/purple text gradient */
+            background: linear-gradient(90deg, #3ae4ff, #8956ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
         }
         header p { 
-            font-size: 1.2em; 
-            margin-top: 15px; 
+            font-size: 1.15em; 
+            margin-top: 10px; 
             color: #94a3b8; 
-            font-weight: 500;
             letter-spacing: 0.5px;
         }
 
@@ -45,42 +45,80 @@
         .container { 
             max-width: 1050px; 
             margin: 0 auto; 
-            padding: 40px 20px 80px; 
-        }
-        
-        h2 { 
-            color: #e2e8f0; 
-            font-size: 1.8em;
-            text-align: center; 
-            margin-bottom: 50px;
-            font-weight: 700;
+            padding: 30px 20px 80px; 
         }
 
-        /* Grid for Cards */
-        .grid { 
+        /* Grid for Bio and Skills */
+        .info-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-bottom: 40px; 
+        }
+        .info-card {
+            background: #151d38; 
+            padding: 25px; 
+            border-radius: 12px; 
+            border: 1px solid #222b49;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .info-card h3 { 
+            margin-top: 0; 
+            color: #3ae4ff; 
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        .info-card p {
+            color: #cbd5e1;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .info-card ul { 
+            padding-left: 18px; 
+            margin-top: 5px; 
+            color: #cbd5e1; 
+            font-size: 0.95em; 
+        }
+
+        /* Key Tools Section */
+        h2 { 
+            color: #e2e8f0; 
+            font-size: 1.8em; 
+            text-align: center; 
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        h2 + p {
+            color: #94a3b8;
+            text-align: center;
+            font-size: 1em;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* Project Cards Grid */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
             gap: 30px; 
         }
 
         /* Premium Card Design */
         .card { 
-            background: #1e293b; 
+            background: #151d38; 
             padding: 30px; 
             border-radius: 16px; 
-            border: 1px solid #334155;
-            transition: all 0.4s ease; 
+            border: 1px solid #222b49;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
             display: flex;
             flex-direction: column;
-            position: relative;
-            overflow: hidden;
+            justify-content: space-between;
         }
-        
-        /* Heavy Hover Effect - Glow & Lift */
         .card:hover { 
-            transform: translateY(-10px); 
-            border-color: #38bdf8;
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.7), 0 0 20px rgba(56, 189, 248, 0.15); 
+            transform: translateY(-8px); 
+            border-color: #3ae4ff; 
+            /* Subtle blue glow */
+            box-shadow: 0 15px 35px -5px rgba(0,0,0,0.6), 0 0 15px rgba(58, 228, 255, 0.2); 
         }
 
         .card h3 { 
@@ -88,51 +126,77 @@
             color: #f8fafc; 
             font-size: 1.4em;
             font-weight: 700;
-            line-height: 1.3;
+            line-height: 1.25;
         }
         
-        .card p {
+        .card-body {
+            flex-grow: 1;
+        }
+        .card-body p {
             color: #cbd5e1;
             line-height: 1.6;
-            flex-grow: 1;
             font-size: 0.95em;
-            margin-bottom: 25px;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
 
-        /* Sleek Tags */
-        .tags-container {
-            margin-bottom: 15px;
+        /* Modern Tags */
+        .card-meta {
+            margin-bottom: 12px;
+            color: #94a3b8;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
         }
         .tag { 
             display: inline-block; 
-            background: rgba(56, 189, 248, 0.1); 
-            padding: 6px 14px; 
+            background: #0d1222; 
+            padding: 5px 12px; 
             border-radius: 20px; 
             font-size: 0.8em; 
             margin-right: 8px; 
-            margin-bottom: 8px; 
-            color: #38bdf8; 
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: #3ae4ff; 
+            border: 1px solid rgba(58, 228, 255, 0.4);
             font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
-        /* Modern Full-Width Button */
+        /* Action Buttons on Cards */
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
         .btn { 
-            display: block; 
+            flex: 1; 
             text-align: center;
-            background: linear-gradient(90deg, #0284c7, #2563eb); 
+            font-family: 'Inter', sans-serif;
+            background: #2c395c;
             color: white; 
-            padding: 14px 20px; 
+            padding: 12px; 
             text-decoration: none; 
             border-radius: 8px; 
             font-weight: 600; 
-            font-size: 0.95em;
-            transition: opacity 0.3s ease, transform 0.2s ease;
+            font-size: 0.9em;
+            transition: background 0.2s ease, opacity 0.2s ease;
         }
         .btn:hover { 
-            opacity: 0.9; 
-            transform: scale(1.02);
+            background: #39486c;
+            opacity: 0.9;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #16aee8, #5345ff);
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        /* Basic Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #0d1222;
+            color: #64748b;
+            font-size: 0.9em;
+            border-top: 1px solid #222b49;
         }
     </style>
 </head>
@@ -140,51 +204,87 @@
 
     <header>
         <h1>Jogesh Sahu</h1>
-        <p>Data Analyst | Specialist in Python, SQL & Power BI</p>
+        <p>Data Analyst | Specializing in Power BI, SQL & Python</p>
     </header>
 
     <div class="container">
         
-        <h2>Featured Data Analytics Projects</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>ABOUT ME / BIO</h3>
+                <p>Results-driven Data Analyst focused on translating raw data into clear, impactful visual stories using Power BI and SQL. Passionate about uncovering data-driven insights that improve business decision-making and operational efficiency.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>KEY DATA TOOLS</h3>
+                <div style="margin-top:10px;">
+                    <span class="tag">Power BI</span>
+                    <span class="tag">SQL (T-SQL)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Excel</span>
+                    <span class="tag">ETL</span>
+                    <span class="tag">DAX</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Featured Projects</h2>
+        <p>Interactive Dashboards & Data Integrity Systems</p>
         
         <div class="grid">
             
-            <!-- Repo 1: Banking Transaction Audit -->
-            <div class="card">
-                <h3>Banking Transaction Audit System</h3>
-                <div class="tags-container">
-                    <span class="tag">TSQL</span>
-                    <span class="tag">Power BI</span>
+            
+<div class="card">
+                <div class="card-body">
+                    <h3>Banking Transaction Audit System</h3>
+                    <div class="card-meta">
+                        TOOLS: <span class="tag">Power BI</span> <span class="tag">T-SQL</span>
+                    </div>
+                    <p>Relational database analysis to audit transaction logs and identify anomalies. Created a Power BI dashboard for fraud detection and system auditing.</p>
                 </div>
-                <p>Relational database analysis focusing on banking transaction audits and data integrity verification.</p>
-                <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Open Live Power BI Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">View Github Repository</a>
+                </div>
             </div>
 
-            <!-- Repo 2: HR Attrition -->
-            <div class="card">
-                <h3>HR Attrition Data Analytics</h3>
-                <div class="tags-container">
-                    <span class="tag">Python</span>
-                    <span class="tag">Power BI</span>
+            
+<div class="card">
+                <div class="card-body">
+                    <h3>HR Attrition Data Analytics</h3>
+                    <div class="card-meta">
+                        TOOLS: <span class="tag">Python</span> <span class="tag">Power BI</span>
+                    </div>
+                    <p>End-to-end analysis project performing Exploratory Data Analysis (EDA) in Python and designing an interactive Power BI dashboard to visualize HR attrition factors.</p>
                 </div>
-                <p>End-to-end HR Attrition analysis using Python for Exploratory Data Analysis (EDA) and Power BI for Visualization.</p>
-                <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Open Live Power BI Dashboard</a>
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">View Github Repository</a>
+                </div>
             </div>
 
-            <!-- Repo 3: Data Analytics Portfolio -->
-            <div class="card">
-                <h3>Data Analytics Portfolio</h3>
-                <div class="tags-container">
-                    <span class="tag">HTML</span>
-                    <span class="tag">SQL</span>
+            
+<div class="card">
+                <div class="card-body">
+                    <h3>E-Commerce Sales Portfolio</h3>
+                    <div class="card-meta">
+                        TOOLS: <span class="tag">SQL</span> <span class="tag">Power BI</span>
+                    </div>
+                    <p>Portfolio piece analyzing Olist e-commerce sales performance. Covers database setup, SQL queries, and a multi-page Power BI dashboard detailing sales, customers, and payment metrics.</p>
                 </div>
-                <p>SQL and Power BI projects focused on E-commerce Sales and Banking Audit Systems.</p>
-                <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Open Live Power BI Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">View Github Repository</a>
+                </div>
             </div>
 
         </div>
 
     </div>
+
+    <footer>
+        <p>Jogesh Sahu | Premium Data Portfolio</p>
+    </footer>
 
 </body>
 </html>
