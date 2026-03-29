@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogesh Sahu | Data Analyst Portfolio</title>
     
-    <!-- Modern Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -238,11 +237,19 @@
             background: linear-gradient(90deg, #16aee8, #5345ff);
             border: none;
             color: white;
+            animation: pulse-glow 2.5s infinite alternate;
         }
 
         .btn-primary:hover {
             opacity: 0.9;
-            box-shadow: 0 4px 15px rgba(83, 69, 255, 0.4);
+            box-shadow: 0 4px 15px rgba(83, 69, 255, 0.6);
+            animation: none;
+        }
+
+        /* Premium Pulse Animation */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 5px rgba(22, 174, 232, 0.2); }
+            100% { box-shadow: 0 0 15px rgba(83, 69, 255, 0.5); }
         }
 
         /* Basic Footer */
@@ -268,7 +275,6 @@
         <h1>Jogesh Sahu</h1>
         <p class="title">Data Analyst | Ranjagola, Dhenkanal, Odisha</p>
         
-        <!-- Updated Contact Links Section -->
         <div class="social-links">
             <a href="mailto:sahujogesh143@gmail.com">✉️ sahujogesh143@gmail.com</a>
             <a href="tel:+918249939548">📞 +91 8249939548</a>
@@ -305,7 +311,6 @@
         
         <div class="grid">
             
-            <!-- NEW PROJECT: Healthcare Analytics -->
             <div class="card">
                 <div class="card-body">
                     <h3>Healthcare Operations Analytics</h3>
@@ -315,12 +320,11 @@
                     <p>End-to-end data pipeline processing hospital records. Cleaned data via Python, joined tables with T-SQL, and built a custom neon-themed dashboard tracking critical KPIs like departmental revenue and appointment no-show rates.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary">Open Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn btn-primary">View Full Dashboard</a>
                     <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn">View GitHub Repo</a>
                 </div>
             </div>
 
-            <!-- Project 1 -->
             <div class="card">
                 <div class="card-body">
                     <h3>Banking Transaction Audit System</h3>
@@ -330,12 +334,11 @@
                     <p>Relational database analysis to audit transaction logs and identify anomalies. Created an interactive Power BI dashboard utilized for fraud detection and financial system auditing.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary">Open Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn btn-primary">View Full Dashboard</a>
                     <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">View GitHub Repo</a>
                 </div>
             </div>
 
-            <!-- Project 2 -->
             <div class="card">
                 <div class="card-body">
                     <h3>HR Attrition Data Analytics</h3>
@@ -345,12 +348,11 @@
                     <p>Comprehensive analysis project performing Exploratory Data Analysis (EDA) in Python to identify key attrition factors, visualized through a dynamic Power BI interface.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary">Open Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn btn-primary">View Full Dashboard</a>
                     <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">View GitHub Repo</a>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="card">
                 <div class="card-body">
                     <h3>E-Commerce Sales Portfolio</h3>
@@ -360,7 +362,7 @@
                     <p>Portfolio piece analyzing comprehensive e-commerce sales performance. Covers database setup, advanced SQL querying, and a multi-page interactive reporting dashboard.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary">Open Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn btn-primary">View Full Dashboard</a>
                     <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">View GitHub Repo</a>
                 </div>
             </div>
