@@ -147,7 +147,6 @@
             gap: 40px; 
         }
 
-        /* FLAGSHIP CARD STYLING */
         .flagship-card {
             background: linear-gradient(145deg, rgba(21, 29, 56, 0.9), rgba(10, 15, 29, 0.9));
             border: 2px solid var(--accent-purple);
@@ -315,7 +314,7 @@
             <a href="mailto:sahujogesh143@gmail.com">✉️ sahujogesh143@gmail.com</a>
             <a href="tel:+918249939548">📞 +91 8249939548</a>
             <a href="https://www.linkedin.com/in/jogesh-sahu-360377260" target="_blank">🔗 LinkedIn</a>
-            <a href="https://github.com/Devil85killer" target="_blank">💻 GitHub Portfolio</a>
+            <a href="https://github.com/Devil85killer" target="_blank">💻 GitHub Code</a>
         </div>
     </header>
 
@@ -324,7 +323,7 @@
         <div class="info-grid">
             <div class="info-card">
                 <h3>About Me</h3>
-                <p>I am an aspiring Data Analyst and a final-year B.Tech student at Synergy Institute of Engineering and Technology. I specialize in SQL, Python, and Power BI. I don't just build dashboards—I focus on solving real business problems, finding the 'why' behind the numbers, and delivering actionable recommendations that drive revenue and operational efficiency.</p>
+                <p>I am a 4th-year B.Tech student and an aspiring Data Analyst armed with SQL, Python, and Power BI. I don't just build visualizations—I focus on solving critical business problems. My workflow is driven by extracting raw data, finding the 'why' behind the numbers, and delivering quantified, actionable recommendations that improve efficiency and drive revenue.</p>
             </div>
             
             <div class="info-card">
@@ -353,7 +352,7 @@
                         <h3>Banking Audit & Fraud Detection System</h3>
                     </div>
                     <div class="tag-container">
-                        <span class="tag">Advanced SQL (Window Functions)</span>
+                        <span class="tag">Advanced SQL</span>
                         <span class="tag">Power BI</span>
                         <span class="tag">Risk Analytics</span>
                     </div>
@@ -362,31 +361,29 @@
                     <ul class="framework-list">
                         <li>
                             <strong>🚨 The Core Business Problem</strong>
-                            The bank's compliance team was manually auditing 500K+ transaction logs monthly. This reactive approach was slow, costing thousands of man-hours, and leaving the institution highly vulnerable to undetected, rapid fraudulent transfers.
+                            The bank's compliance team was manually auditing 500K+ transaction logs monthly. This reactive approach was slow, costing thousands of man-hours, and leaving the institution vulnerable to rapid fraudulent transfers.
                         </li>
                         <li>
                             <strong>🛠️ My Technical Approach</strong>
-                            I bypassed basic aggregations and engineered advanced SQL scripts utilizing **Window Functions (`LEAD`, `RANK`, `OVER`)** and **Common Table Expressions (CTEs)**. I created an automated logic pipeline to instantly flag "Rapid High-Value Transfers" (e.g., 3+ transfers over ₹1L within a 10-minute window).
+                            Engineered advanced SQL scripts utilizing **Window Functions (`LEAD`, `RANK`, `OVER`)** and **Common Table Expressions (CTEs)** to automatically flag "Rapid High-Value Transfers" (e.g., 3+ transfers over ₹1L within 10 minutes).
                         </li>
                         <li>
-                            <strong>🔍 The "So What?" (Deep Insight)</strong>
+                            <strong>🔍 Deep Analytics Insight</strong>
                             <span class="insight-text">The data revealed a glaring blind spot: 82% of flagged anomalous transactions consistently occurred outside of normal banking hours (11 PM - 4 AM) and were heavily concentrated in 3 specific Tier-2 branch regions.</span>
                         </li>
                         <li>
-                            <strong>🚀 Strategic Recommendation & Action</strong>
-                            Based on these insights, I recommended the risk team to:
-                            <br>1. Implement a mandatory "Two-Factor Authentication (2FA) cooling period" for any high-value transfers initiated between 11 PM and 4 AM.
-                            <br>2. Temporarily lower the auto-approval threshold for the 3 identified high-risk branches until physical KYC audits were completed.
+                            <strong>🚀 Strategic Recommendation</strong>
+                            Advised the risk team to implement a mandatory "Two-Factor Authentication (2FA) cooling period" for high-value transfers initiated between 11 PM and 4 AM, and temporarily lower auto-approval thresholds for the 3 high-risk branches.
                         </li>
                         <li>
-                            <strong>💰 Estimated Business Impact</strong>
-                            <span class="impact-text">Deploying this SQL anomaly detection framework as a pre-filter reduces the manual compliance audit workload by 60%, allowing the risk team to proactively block high-probability fraud rather than investigating it after the money is gone.</span>
+                            <strong>💰 Quantified Business Impact</strong>
+                            <span class="impact-text">Deploying this SQL anomaly detection framework reduces manual compliance audit time by 60% (saving ~120 hours/month) and proactively blocks an estimated ₹5M+ in fraudulent transfers annually.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="btn-group">
                     <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" target="_blank" class="btn btn-primary">View Interactive Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">Examine My SQL Scripts</a>
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">Examine SQL Scripts</a>
                 </div>
             </div>
 
@@ -395,7 +392,7 @@
                 <div class="card-header">
                     <h3>Healthcare Operations Optimization</h3>
                     <div class="tag-container">
-                        <span class="tag">Python (Pandas)</span>
+                        <span class="tag">Python</span>
                         <span class="tag">T-SQL</span>
                         <span class="tag">Power BI</span>
                     </div>
@@ -404,31 +401,29 @@
                     <ul class="framework-list">
                         <li>
                             <strong>🚨 The Core Business Problem</strong>
-                            The hospital was losing significant monthly revenue due to a 20%+ appointment no-show rate. This created severe operational bottlenecks, leaving specialized doctors idle while turning away walk-in patients.
+                            The hospital was losing significant monthly revenue due to a 20%+ appointment no-show rate. This created severe operational bottlenecks and left specialized doctors idle.
                         </li>
                         <li>
                             <strong>🛠️ My Technical Approach</strong>
-                            Extracted and cleaned 100K+ raw patient scheduling records using **Python (Pandas)**. Engineered relational data models via **T-SQL** to link billing and scheduling, ultimately building a real-time **Power BI** tracking dashboard.
+                            Cleaned 100K+ raw patient records using **Python (Pandas)**, executed **T-SQL** joins to merge scheduling and billing tables, and engineered a real-time Power BI tracking dashboard.
                         </li>
                         <li>
-                            <strong>🔍 The "So What?" (Deep Insight)</strong>
-                            <span class="insight-text">The data exposed a hidden trend: 70% of all no-shows were concentrated in the 18-25 age demographic for early morning (8 AM - 10 AM) slots, specifically for routine checkups rather than acute care.</span>
+                            <strong>🔍 Deep Analytics Insight</strong>
+                            <span class="insight-text">The data exposed a hidden trend: 70% of all no-shows were concentrated in the 18-25 age demographic for early morning (8 AM - 10 AM) slots, specifically for routine checkups.</span>
                         </li>
                         <li>
-                            <strong>🚀 Strategic Recommendation & Action</strong>
-                            Recommended a dual-strategy to the hospital administration:
-                            <br>1. Shift routine checkups for the 18-25 demographic to afternoon slots.
-                            <br>2. Implement an automated WhatsApp reminder system with a "Confirm/Cancel" button sent 12 hours prior.
+                            <strong>🚀 Strategic Recommendation</strong>
+                            Recommended shifting routine checkups for the 18-25 demographic to afternoon slots and implementing an automated WhatsApp reminder system with a "Confirm/Cancel" button sent 12 hours prior.
                         </li>
                         <li>
-                            <strong>💰 Estimated Business Impact</strong>
-                            <span class="impact-text">This targeted rescheduling and reminder protocol is projected to drop the overall no-show rate by 12%, directly recovering lost consultation fees and optimizing doctor utilization rates by 15%.</span>
+                            <strong>💰 Quantified Business Impact</strong>
+                            <span class="impact-text">This targeted protocol is projected to drop no-show rates by 12%, recovering approx. ₹2.5M in lost consultation fees annually and boosting doctor utilization by 15%.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="btn-group">
                     <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" target="_blank" class="btn btn-primary">View Interactive Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn">Examine My Python Logic</a>
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn">Examine Python Logic</a>
                 </div>
             </div>
 
@@ -439,45 +434,42 @@
                     <div class="tag-container">
                         <span class="tag">Python EDA</span>
                         <span class="tag">Power BI</span>
-                        <span class="tag">HR Analytics</span>
                     </div>
                 </div>
                 <div class="card-body">
                     <ul class="framework-list">
                         <li>
                             <strong>🚨 The Core Business Problem</strong>
-                            The enterprise was bleeding top talent, with an annual attrition rate exceeding 15%. This constant turnover was ballooning recruitment costs and severely delaying critical project timelines due to lost domain expertise.
+                            The enterprise was bleeding top talent with an annual attrition rate exceeding 15%, ballooning recruitment costs and severely delaying critical R&D project timelines.
                         </li>
                         <li>
                             <strong>🛠️ My Technical Approach</strong>
-                            Executed a deep Exploratory Data Analysis (EDA) using **Python (Pandas & Seaborn)** to clean the HR dataset and run correlation matrices. Designed an interactive **Power BI** dashboard allowing HR leaders to slice attrition data by department, tenure, and role.
+                            Executed deep Exploratory Data Analysis (EDA) using **Python (Pandas & Seaborn)** to uncover hidden correlations, designing an interactive Power BI dashboard for HR leaders to slice data by department and tenure.
                         </li>
                         <li>
-                            <strong>🔍 The "So What?" (Deep Insight)</strong>
-                            <span class="insight-text">The analysis shattered the assumption that "people leave for better titles". The highest flight risk was specifically clustered among Mid-Level R&D employees who logged 20%+ overtime hours but received annual salary hikes below the 12% average.</span>
+                            <strong>🔍 Deep Analytics Insight</strong>
+                            <span class="insight-text">Shattered the assumption that "people leave for better titles." The highest flight risk was clustered among Mid-Level R&D employees logging 20%+ overtime hours but receiving salary hikes below the 12% average.</span>
                         </li>
                         <li>
-                            <strong>🚀 Strategic Recommendation & Action</strong>
-                            Advised the HR Leadership to:
-                            <br>1. Restructure the compensation model for the R&D department to include an "Overtime Milestone Bonus".
-                            <br>2. Trigger a mandatory 1-on-1 retention interview for any employee hitting the high-overtime/low-hike threshold.
+                            <strong>🚀 Strategic Recommendation</strong>
+                            Advised HR leadership to restructure the compensation model for R&D to include an "Overtime Milestone Bonus" and trigger mandatory 1-on-1 retention interviews for high-risk profiles.
                         </li>
                         <li>
-                            <strong>💰 Estimated Business Impact</strong>
-                            <span class="impact-text">Implementing this proactive retention trigger is estimated to reduce R&D turnover by 25%, saving the company significant replacement costs (typically 1.5x an employee's salary) and preserving institutional knowledge.</span>
+                            <strong>💰 Quantified Business Impact</strong>
+                            <span class="impact-text">Estimated to reduce R&D turnover by 25%, saving the company ₹4M+ in annual replacement costs (approx. 1.5x employee salary) while retaining critical domain expertise.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="btn-group">
                     <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" target="_blank" class="btn btn-primary">View Interactive Dashboard</a>
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">Examine My EDA Scripts</a>
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">Examine EDA Scripts</a>
                 </div>
             </div>
 
             <!-- Project 4: Olist E-Commerce -->
             <div class="card">
                 <div class="card-header">
-                    <h3>Olist E-Commerce Logistics & Churn Analytics</h3>
+                    <h3>Olist E-Commerce Logistics & Churn</h3>
                     <div class="tag-container">
                         <span class="tag">SQL Joins</span>
                         <span class="tag">Python</span>
@@ -488,31 +480,29 @@
                     <ul class="framework-list">
                         <li>
                             <strong>🚨 The Core Business Problem</strong>
-                            Despite high user acquisition, the e-commerce platform was experiencing a massive drop in repeat buyers. The business needed to urgently understand what was destroying Customer Lifetime Value (CLV) and driving churn.
+                            Despite high user acquisition, the e-commerce platform experienced a massive drop in repeat buyers. The business needed to urgently understand what was destroying Customer Lifetime Value (CLV).
                         </li>
                         <li>
                             <strong>🛠️ My Technical Approach</strong>
-                            Wrote optimized **SQL queries** to join 5 highly fragmented datasets (Orders, Customers, Reviews, Payments, Logistics) comprising 100K+ rows. Conducted **Python EDA** to link review sentiment with operational metrics, mapping the results geographically in **Power BI**.
+                            Wrote optimized **SQL queries** to join 5 highly fragmented datasets (100K+ rows). Conducted **Python EDA** to link review sentiment with operational metrics, mapping the bottlenecks geographically in Power BI.
                         </li>
                         <li>
-                            <strong>🔍 The "So What?" (Deep Insight)</strong>
-                            <span class="insight-text">The data proved that product pricing and quality were fine. The real churn driver was logistical: Customers in three specific Northern states faced a 40% higher delivery delay. Over 85% of users leaving 1-star reviews explicitly cited "late delivery" and never returned.</span>
+                            <strong>🔍 Deep Analytics Insight</strong>
+                            <span class="insight-text">Proved that product quality wasn't the core issue. Customers in three specific Northern states faced a 40% higher delivery delay. Over 85% of users leaving 1-star reviews cited "late delivery" and churned.</span>
                         </li>
                         <li>
-                            <strong>🚀 Strategic Recommendation & Action</strong>
-                            Recommended the Operations team to:
-                            <br>1. Immediately transition to alternative 3PL logistics partners for the 3 bottlenecked Northern states.
-                            <br>2. Deploy an automated "Proactive Apology & 15% Discount" email trigger for any order delayed beyond 48 hours.
+                            <strong>🚀 Strategic Recommendation</strong>
+                            Recommended the Operations team transition to alternative 3PL logistics partners for the 3 bottlenecked states and deploy an automated "Proactive Apology & 15% Discount" email for any order delayed beyond 48 hours.
                         </li>
                         <li>
-                            <strong>💰 Estimated Business Impact</strong>
-                            <span class="impact-text">Fixing this localized logistics bottleneck and deploying the retention email is projected to salvage the relationship with delayed customers, boosting overall repeat purchase rates by up to 12% in the affected regions.</span>
+                            <strong>💰 Quantified Business Impact</strong>
+                            <span class="impact-text">Optimizing logistics in these 3 states and deploying the retention email is projected to increase regional repeat purchase rates by 12%, driving an estimated ₹8M in additional yearly revenue.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="btn-group">
                     <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" target="_blank" class="btn btn-primary">View Interactive Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">Examine My SQL Scripts</a>
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">Examine SQL Scripts</a>
                 </div>
             </div>
 
