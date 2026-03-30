@@ -5,378 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogesh Sahu | Data Analyst Portfolio</title>
     
+    <!-- Modern Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
     <style>
         /* Modern Premium Dark Theme Variables */
         :root {
-            --bg-main: #0a0f1d;
-            --bg-card: rgba(21, 29, 56, 0.7);
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --accent-cyan: #00FFFF;
-            --accent-purple: #8956ff;
-            --border-color: rgba(34, 43, 73, 0.8);
+            --bg-main: #0a0f16;
+            --bg-card: #141b25;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --border-color: #1f2937;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 0; 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
             background-color: var(--bg-main);
-            color: var(--text-main); 
-            overflow-x: hidden;
+            color: var(--text-primary);
             line-height: 1.6;
+            padding: 2rem;
         }
 
-        /* Full-Width Header with Subtle Glow */
-        header { 
-            padding: 80px 20px 40px; 
-            text-align: center; 
-            background: radial-gradient(circle at top center, #151d38 0%, var(--bg-main) 100%);
-            border-bottom: 1px solid var(--border-color);
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        header h1 { 
-            margin: 0; 
-            font-size: 3.5em; 
-            font-weight: 900; 
-            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+        /* --- Header / About Section --- */
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -1.5px;
         }
 
-        header p.title { 
-            font-size: 1.2em; 
-            margin-top: 10px; 
-            color: var(--text-muted); 
-            font-weight: 500;
-            letter-spacing: 0.5px;
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
         }
 
-        /* Social/Contact Links */
-        .social-links {
+        .about-text {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .skills {
+            margin-top: 1.5rem;
             display: flex;
             justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 25px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .social-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.05);
+        .skill-tag {
+            background-color: var(--bg-card);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            transition: all 0.3s ease;
+            color: var(--text-primary);
         }
 
-        .social-links a:hover {
-            background: rgba(0, 255, 255, 0.1);
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-            transform: translateY(-2px);
+        /* --- Projects Section --- */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
         }
 
-        /* Container Layout */
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 50px 20px 80px; 
-        }
-
-        /* Grid for Bio and Skills */
-        .info-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-            margin-bottom: 60px; 
-        }
-
-        .info-card {
-            background: var(--bg-card); 
-            backdrop-filter: blur(10px);
-            padding: 30px; 
-            border-radius: 16px; 
+        .project-card {
+            background-color: var(--bg-card);
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease;
         }
 
-        .info-card h3 { 
-            margin-top: 0; 
-            color: var(--accent-cyan); 
-            font-size: 1.1em;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
         }
 
-        .info-card p {
-            color: var(--text-muted);
-            font-size: 0.95em;
-        }
-
-        /* Section Headers */
-        .section-title { 
-            color: var(--text-main); 
-            font-size: 2em; 
-            text-align: center; 
-            margin-bottom: 5px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            color: var(--text-muted);
-            text-align: center;
-            font-size: 1.05em;
-            margin-top: 0;
-            margin-bottom: 40px;
-        }
-
-        /* Project Cards Grid */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 30px; 
-        }
-
-        /* Premium Card Design */
-        .card { 
-            background: var(--bg-card); 
-            backdrop-filter: blur(10px);
-            padding: 30px; 
-            border-radius: 16px; 
-            border: 1px solid var(--border-color);
-            transition: all 0.4s ease; 
+        .project-header {
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
         }
 
-        .card:hover { 
-            transform: translateY(-8px); 
-            border-color: rgba(0, 255, 255, 0.4); 
-            box-shadow: 0 15px 35px -5px rgba(0,0,0,0.5), 0 0 20px rgba(0, 255, 255, 0.15); 
-        }
-
-        .card h3 { 
-            margin-top: 0; 
-            color: #f8fafc; 
-            font-size: 1.4em;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        .card-body {
-            flex-grow: 1;
-        }
-
-        .card-body p {
-            color: var(--text-muted);
-            font-size: 0.95em;
-            margin-top: 15px;
-            margin-bottom: 25px;
-        }
-
-        /* Modern Tags */
-        .card-meta {
-            margin-bottom: 12px;
-            color: var(--text-muted);
-            font-size: 0.85em;
+        .project-title {
+            font-size: 1.5rem;
             font-weight: 600;
         }
 
-        .tag { 
-            display: inline-block; 
-            background: rgba(0, 0, 0, 0.3); 
-            padding: 4px 12px; 
-            border-radius: 20px; 
-            font-size: 0.85em; 
-            margin-right: 6px; 
-            margin-bottom: 6px;
-            color: var(--accent-cyan); 
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            font-weight: 600;
+        .project-tools {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        /* Action Buttons on Cards */
+        .project-story {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-item {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .story-item strong {
+            color: var(--text-primary);
+        }
+
+        /* --- Buttons --- */
         .btn-group {
             display: flex;
-            gap: 12px;
-            margin-top: auto;
+            gap: 1rem;
         }
 
-        .btn { 
-            flex: 1; 
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main); 
-            padding: 12px 10px; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: 600; 
-            font-size: 0.85em;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover { 
-            background: rgba(255, 255, 255, 0.1);
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, #16aee8, #5345ff);
-            border: none;
+            background-color: var(--accent);
             color: white;
-            animation: pulse-glow 2.5s infinite alternate;
         }
 
         .btn-primary:hover {
-            opacity: 0.9;
-            box-shadow: 0 4px 15px rgba(83, 69, 255, 0.6);
-            animation: none;
+            background-color: var(--accent-hover);
         }
 
-        /* Premium Pulse Animation */
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 5px rgba(22, 174, 232, 0.2); }
-            100% { box-shadow: 0 0 15px rgba(83, 69, 255, 0.5); }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
         }
 
-        /* Basic Footer */
+        .btn-secondary:hover {
+            background-color: var(--border-color);
+        }
+
+        /* Footer */
         footer {
+            margin-top: 4rem;
             text-align: center;
-            padding: 40px;
-            background: var(--bg-main);
-            color: #64748b;
-            font-size: 0.9em;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5em; }
-            .btn-group { flex-direction: column; }
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Jogesh Sahu</h1>
-        <p class="title">Data Analyst | Ranjagola, Dhenkanal, Odisha</p>
-        
-        <div class="social-links">
-            <a href="mailto:sahujogesh143@gmail.com">✉️ sahujogesh143@gmail.com</a>
-            <a href="tel:+918249939548">📞 +91 8249939548</a>
-            <a href="https://www.linkedin.com/in/jogesh-sahu-360377260" target="_blank">🔗 LinkedIn</a>
-            <a href="https://github.com/Devil85killer" target="_blank">💻 GitHub</a>
-        </div>
-    </header>
-
     <div class="container">
         
-        <div class="info-grid">
-            <div class="info-card">
-                <h3>About Me</h3>
-                <p>Results-driven Data Analyst focused on translating raw data into clear, actionable visual stories. Passionate about uncovering insights that improve business decision-making and operational efficiency using modern data pipelines, statistical analysis, and data visualization techniques.</p>
+        <!-- HEADER / ABOUT SECTION -->
+        <header>
+            <h1>Jogesh Sahu</h1>
+            <p class="tagline">Data Analyst | Problem Solver | Storyteller</p>
+            <p class="about-text">
+                Final-year B.Tech student passionate about turning raw datasets into actionable business strategies. I specialize in using SQL and Python to clean data, uncover trends, and build clear narratives that drive decision-making. Always eager to solve complex problems and learn new analytical tools.
+            </p>
+            <div class="skills">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python (Pandas, NumPy)</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">Data Cleaning</span>
             </div>
-            
-            <div class="info-card">
-                <h3>Core Data Analyst Skills</h3>
-                <div style="margin-top:15px; display: flex; flex-wrap: wrap;">
-                    <span class="tag">SQL (MySQL / T-SQL)</span>
-                    <span class="tag">Python (Pandas, NumPy)</span>
-                    <span class="tag">Power BI & DAX</span>
-                    <span class="tag">Advanced Excel</span>
-                    <span class="tag">Data Visualization</span>
-                    <span class="tag">Data Cleaning & EDA</span>
-                    <span class="tag">ETL Processes</span>
-                    <span class="tag">Statistical Analysis</span>
-                </div>
-            </div>
-        </div>
+        </header>
 
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Interactive Dashboards & Data Integrity Systems</p>
-        
-        <div class="grid">
-            
-            <!-- Healthcare Analytics -->
-            <div class="card">
-                <div class="card-body">
-                    <h3>Healthcare Operations Analytics</h3>
-                    <div class="card-meta">
-                        <span class="tag">Python</span> <span class="tag">SQL</span> <span class="tag">Power BI</span>
-                    </div>
-                    <p>End-to-end data pipeline processing hospital records. Cleaned data via Python, joined tables with T-SQL, and built a custom neon-themed dashboard tracking critical KPIs like departmental revenue and appointment no-show rates.</p>
+        <!-- PROJECTS SECTION -->
+        <main>
+            <h2 class="section-title">Featured Case Studies</h2>
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Financial Banking Transaction Audit System</h3>
+                    <span class="project-tools">SQL • Python • Data Cleaning</span>
+                </div>
+                <div class="project-story">
+                    <p class="story-item"><strong>Problem:</strong> Needed a systematic way to identify anomalous patterns and ensure compliance within high-volume banking transaction records.</p>
+                    <p class="story-item"><strong>Approach:</strong> Analyzed simulated financial datasets using Python for initial data wrangling and SQL for complex querying to detect irregular transaction behaviors.</p>
+                    <p class="story-item"><strong>Impact:</strong> Created a robust query framework capable of flagging high-risk transactions, demonstrating a clear understanding of data auditing and financial compliance logic.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" target="_blank" class="btn btn-primary">View Full Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn">View GitHub Repo</a>
+                    <a href="YOUR_GITHUB_LINK_HERE" class="btn btn-primary" target="_blank">View on GitHub</a>
+                    <a href="YOUR_DOCUMENT_LINK_HERE" class="btn btn-secondary" target="_blank">Read Full Case Study</a>
                 </div>
             </div>
 
-            <!-- Banking Transaction -->
-            <div class="card">
-                <div class="card-body">
-                    <h3>Banking Transaction Audit System</h3>
-                    <div class="card-meta">
-                        <span class="tag">Power BI</span> <span class="tag">T-SQL</span>
-                    </div>
-                    <p>Relational database analysis to audit transaction logs and identify anomalies. Created an interactive Power BI dashboard utilized for fraud detection and financial system auditing.</p>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Dhatree: AI-Based Crop & Disease Analysis</h3>
+                    <span class="project-tools">Python • Machine Learning • Data Analysis</span>
+                </div>
+                <div class="project-story">
+                    <p class="story-item"><strong>Problem:</strong> Farmers lack data-driven insights to make optimal crop choices and detect diseases early, leading to yield losses.</p>
+                    <p class="story-item"><strong>Approach:</strong> Processed and analyzed agricultural datasets to build a recommendation engine. Used Python to structure the data pipeline and extract key environmental patterns.</p>
+                    <p class="story-item"><strong>Impact:</strong> Developed an analytical model that correlates soil and weather data to recommend the most viable crops, showcasing the ability to apply data analysis to real-world agricultural challenges.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" target="_blank" class="btn btn-primary">View Full Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn">View GitHub Repo</a>
+                    <a href="YOUR_GITHUB_LINK_HERE" class="btn btn-primary" target="_blank">View Code</a>
                 </div>
             </div>
 
-            <!-- HR Attrition -->
-            <div class="card">
-                <div class="card-body">
-                    <h3>HR Attrition Data Analytics</h3>
-                    <div class="card-meta">
-                        <span class="tag">Python</span> <span class="tag">Power BI</span>
-                    </div>
-                    <p>Comprehensive analysis project performing Exploratory Data Analysis (EDA) in Python to identify key attrition factors, visualized through a dynamic Power BI interface.</p>
-                </div>
-                <div class="btn-group">
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" target="_blank" class="btn btn-primary">View Full Dashboard</a>
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn">View GitHub Repo</a>
-                </div>
-            </div>
+            <!-- Add more projects using the same card structure above -->
 
-            <!-- E-Commerce Sales -->
-            <div class="card">
-                <div class="card-body">
-                    <h3>E-Commerce Sales Portfolio</h3>
-                    <div class="card-meta">
-                        <span class="tag">SQL</span> <span class="tag">Power BI</span>
-                    </div>
-                    <p>Portfolio piece analyzing comprehensive e-commerce sales performance. Covers database setup, advanced SQL querying, and a multi-page interactive reporting dashboard.</p>
-                </div>
-                <div class="btn-group">
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" target="_blank" class="btn btn-primary">View Full Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn">View GitHub Repo</a>
-                </div>
-            </div>
+        </main>
 
-        </div>
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 Jogesh Sahu. Open to Data Analyst opportunities.</p>
+            <div class="skills" style="margin-top: 1rem; border:none;">
+                <a href="mailto:your.email@example.com" class="skill-tag" style="text-decoration: none;">Email Me</a>
+                <a href="YOUR_LINKEDIN" class="skill-tag" style="text-decoration: none;" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+
     </div>
-
-    <footer>
-        <p>&copy; 2026 Jogesh Sahu | Data Analyst Portfolio</p>
-    </footer>
 
 </body>
 </html>
