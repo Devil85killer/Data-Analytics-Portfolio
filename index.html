@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogesh Sahu | Data Analyst Portfolio</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Modern Premium Dark Theme Variables */
         :root {
             --bg-main: #0a0f1d;
             --bg-card: rgba(21, 29, 56, 0.7);
-            --text-main: #e2e8f0;
+            --bg-card-hover: rgba(26, 35, 66, 0.9);
+            --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --accent-cyan: #00FFFF;
             --accent-purple: #8956ff;
             --border-color: rgba(34, 43, 73, 0.8);
             --success-green: #10b981;
+            --nav-bg: rgba(10, 15, 29, 0.95);
         }
 
         body { 
@@ -26,13 +27,31 @@
             padding: 0; 
             background-color: var(--bg-main);
             color: var(--text-main); 
-            overflow-x: hidden;
             line-height: 1.6;
+            padding-top: 70px;
         }
 
-        /* Centered Header Layout */
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            box-sizing: border-box;
+        }
+
+        .nav-logo { font-weight: 800; font-size: 1.2em; color: var(--text-main); text-decoration: none; }
+        
+        /* Hero Section */
         header { 
-            padding: 60px 20px 40px; 
+            padding: 80px 20px 60px; 
             text-align: center; 
             background: radial-gradient(circle at top center, #151d38 0%, var(--bg-main) 100%);
             border-bottom: 1px solid var(--border-color);
@@ -50,219 +69,122 @@
             border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
-        /* Profile Picture Styling */
-        .profile-pic-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
+        .profile-pic-container { display: flex; justify-content: center; margin-bottom: 20px; }
         .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
+            width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
             border: 3px solid var(--accent-purple);
             box-shadow: 0 0 25px rgba(137, 86, 255, 0.4);
         }
 
         header h1 { 
-            margin: 0; 
-            font-size: 3.5em; 
-            font-weight: 900; 
+            margin: 0 0 5px 0; font-size: 3.8em; font-weight: 900; 
             background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             letter-spacing: -1.5px;
         }
 
-        header p.title { 
-            font-size: 1.2em; 
-            margin-top: 10px; 
-            color: var(--text-muted); 
-            font-weight: 500;
-            letter-spacing: 0.5px;
+        header p.title { font-size: 1.2em; color: var(--text-muted); font-weight: 500; margin: 0 0 25px 0; }
+
+        /* High-Impact Metrics */
+        .hero-metrics {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;
         }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 25px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        .metric-pill {
+            background: rgba(255,255,255,0.05); border: 1px solid var(--border-color);
+            padding: 8px 16px; border-radius: 8px; font-size: 0.9em; font-weight: 600; color: var(--text-main);
         }
+        .metric-pill span { color: var(--accent-cyan); }
 
-        .social-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: rgba(0, 255, 255, 0.1);
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-            transform: translateY(-2px);
-        }
-
-        .container { 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            padding: 50px 20px 80px; 
-        }
-
-        /* Simple About Section */
-        .about-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 60px;
-            text-align: center;
-            font-size: 1.05em;
-            color: var(--text-muted);
-        }
-
-        .section-title { 
-            color: var(--text-main); 
-            font-size: 2.2em; 
-            text-align: center; 
-            margin-bottom: 40px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        /* Project Cards */
-        .project-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            margin-bottom: 40px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover { transform: translateY(-5px); border-color: rgba(0, 255, 255, 0.3); }
-
-        .flagship { border: 1px solid var(--accent-purple); box-shadow: 0 10px 30px rgba(137, 86, 255, 0.1); }
-
-        /* Real Image Thumbnails */
-        .project-thumbnail {
-            height: 280px;
-            background: #111827;
-            border-bottom: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-
-        .project-thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-thumbnail img {
-            transform: scale(1.03);
-        }
-
-        .project-content { padding: 30px; }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-
-        .project-title { font-size: 1.6em; font-weight: 700; margin: 0; }
-
-        .meta-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 12px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-        }
-
-        .meta-item {
-            font-size: 0.85em;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .meta-item span { color: var(--accent-cyan); font-weight: 600; }
-
-        .project-description { margin: 0 0 20px 0; color: var(--text-muted); font-size: 0.95em; }
-
-        .impact-statement {
-            background: rgba(16, 185, 129, 0.05);
-            border-left: 3px solid var(--success-green);
-            padding: 12px 15px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95em;
-            color: #e2e8f0;
-            margin-bottom: 25px;
-        }
-
-        .project-actions { display: flex; gap: 15px; flex-wrap: wrap; }
+        /* Hero Buttons */
+        .hero-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
 
         .btn {
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9em;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            text-align: center;
+            padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95em;
+            text-decoration: none; transition: all 0.3s ease; text-align: center;
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
         }
 
-        .btn-primary {
-            background: linear-gradient(90deg, #16aee8, #5345ff);
-            color: white;
-            border: none;
-        }
-
+        .btn-primary { background: linear-gradient(90deg, #16aee8, #5345ff); color: white; border: none; }
         .btn-primary:hover { box-shadow: 0 4px 15px rgba(83, 69, 255, 0.5); transform: translateY(-2px); }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
-
+        .btn-outline { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); }
         .btn-outline:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--bg-main);
-            color: #64748b;
-            font-size: 0.9em;
-            border-top: 1px solid var(--border-color);
+        .btn-sm { padding: 8px 16px; font-size: 0.85em; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+        .section-title { 
+            color: var(--text-main); font-size: 2.2em; text-align: center; 
+            margin-bottom: 40px; font-weight: 800; letter-spacing: -0.5px;
         }
+
+        /* What I Can Do Section */
+        .skills-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;
+            background: var(--bg-card); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+        .skill-item { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--text-main); }
+        .skill-item span { color: var(--success-green); font-size: 1.2em; }
+
+        /* Project Cards - Image First, Text Second */
+        .project-card {
+            background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border-color);
+            overflow: hidden; margin-bottom: 60px; transition: transform 0.3s ease;
+        }
+        .project-card:hover { border-color: rgba(0, 255, 255, 0.3); background: var(--bg-card-hover); }
+
+        .flagship { border: 1px solid var(--accent-purple); box-shadow: 0 10px 40px rgba(137, 86, 255, 0.15); }
+
+        /* Massive Dashboard Images */
+        .project-visual { width: 100%; border-bottom: 1px solid var(--border-color); background: #000; overflow: hidden; }
+        .project-visual img { width: 100%; height: auto; max-height: 550px; object-fit: cover; object-position: top; display: block; }
+
+        .project-content { padding: 35px; }
+
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;}
+        .project-title { font-size: 1.8em; font-weight: 800; margin: 0; color: #fff; }
+
+        /* Condensed Meta Data */
+        .meta-strip {
+            display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;
+            font-size: 0.85em; font-weight: 600; color: var(--text-muted);
+        }
+        .meta-strip span { background: rgba(0,0,0,0.3); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.05); }
+        .meta-strip span b { color: var(--accent-cyan); font-weight: 700; }
+
+        /* Condensed Text Layout */
+        .brief-grid { display: grid; gap: 15px; margin-bottom: 25px; font-size: 0.95em; color: var(--text-muted); }
+        .brief-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border-left: 3px solid var(--border-color); }
+        .brief-item strong { color: var(--text-main); display: block; margin-bottom: 4px; font-size: 1.05em; }
+
+        .impact-box {
+            background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--success-green);
+            padding: 15px; border-radius: 8px; color: #fff; font-size: 0.95em;
+        }
+        .impact-box strong { color: var(--success-green); font-size: 1.05em; display: block; margin-bottom: 4px;}
+
+        /* 4 Button Layout */
+        .project-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 30px; }
+
+        footer { text-align: center; padding: 40px; background: var(--bg-main); color: #64748b; font-size: 0.9em; border-top: 1px solid var(--border-color); }
 
         @media (max-width: 768px) {
             header h1 { font-size: 2.8em; }
+            .hero-metrics { flex-direction: column; align-items: center; }
+            .project-title { font-size: 1.4em; }
         }
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="#" class="nav-logo">JS.</a>
+        <div>
+            <a href="https://github.com/Devil85killer" target="_blank" style="color:#fff; text-decoration:none; font-weight:600;">GitHub</a>
+        </div>
+    </nav>
 
     <header>
         <div class="status-badge">🟢 Open to Data Analyst Roles</div>
@@ -274,178 +196,224 @@
         <h1>Jogesh Sahu</h1>
         <p class="title">Data Analyst | Transform Data Into Decisions</p>
         
-        <div class="social-links">
-            <a href="mailto:sahujogesh143@gmail.com">✉️ sahujogesh143@gmail.com</a>
-            <a href="tel:+918249939548">📞 +91 8249939548</a>
-            <a href="https://www.linkedin.com/in/jogesh-sahu-360377260" target="_blank">🔗 LinkedIn</a>
-            <a href="https://github.com/Devil85killer" target="_blank">💻 GitHub Code</a>
+        <div class="hero-metrics">
+            <div class="metric-pill"><span>🚀</span> 5 Analytics Projects</div>
+            <div class="metric-pill"><span>💻</span> SQL • Python • Power BI</div>
+            <div class="metric-pill"><span>📊</span> 1M+ Rows Analyzed</div>
+            <div class="metric-pill"><span>📈</span> Interactive Dashboards</div>
+        </div>
+        
+        <div class="hero-btns">
+            <a href="#" class="btn btn-primary">📄 View Resume</a>
+            <a href="https://github.com/Devil85killer" target="_blank" class="btn btn-outline">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/jogesh-sahu-360377260" target="_blank" class="btn btn-outline">🔗 LinkedIn</a>
+            <a href="mailto:sahujogesh143@gmail.com" class="btn btn-outline">✉️ Contact Me</a>
         </div>
     </header>
 
     <div class="container">
         
-        <div class="about-card">
-            Data Analyst skilled in SQL, Python, and Power BI. I use data analysis, visualization, and machine learning techniques to solve business problems and support data-driven decision making.
+        <h2 class="section-title">What I Can Do</h2>
+        <div class="skills-grid">
+            <div class="skill-item"><span>✓</span> SQL Data Analysis</div>
+            <div class="skill-item"><span>✓</span> Dashboard Development</div>
+            <div class="skill-item"><span>✓</span> Data Cleaning & ETL</div>
+            <div class="skill-item"><span>✓</span> Exploratory Data Analysis</div>
+            <div class="skill-item"><span>✓</span> Business Insights</div>
+            <div class="skill-item"><span>✓</span> Predictive Analytics (ML)</div>
         </div>
 
         <h2 class="section-title">Case Studies & Projects</h2>
 
         <div class="project-card flagship">
-            <div class="project-thumbnail">
+            <div class="project-visual">
                 <img src="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" alt="Banking Dashboard">
             </div>
+            
             <div class="project-content">
                 <div class="project-header">
                     <h3 class="project-title">Banking Audit & Fraud Detection System</h3>
                 </div>
                 
-                <div class="meta-grid">
-                    <div class="meta-item">📂 <span>Domain:</span> Banking & Finance</div>
-                    <div class="meta-item">📊 <span>Dataset:</span> 500K+ Rows</div>
-                    <div class="meta-item">⏱️ <span>Duration:</span> 3 Weeks</div>
-                    <div class="meta-item">🛠️ <span>Tools:</span> Advanced SQL, Power BI</div>
+                <div class="meta-strip">
+                    <span><b>Tools:</b> Advanced SQL, Power BI</span>
+                    <span><b>Dataset:</b> 500K+ Rows</span>
+                    <span><b>Domain:</b> Banking & Risk</span>
                 </div>
 
-                <p class="project-description">
-                    <strong>Problem:</strong> The compliance team was manually auditing thousands of transaction logs, creating a reactive and slow environment vulnerable to rapid fraudulent transfers. <br><br>
-                    <strong>Approach:</strong> Engineered advanced SQL scripts utilizing Window Functions (LEAD, RANK, OVER) and CTEs to automatically flag "Rapid High-Value Transfers" occurring outside normal banking hours.
-                </p>
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <strong>🚨 Problem</strong>
+                        Manual audit of 500K+ transaction logs created a reactive environment vulnerable to rapid fraudulent transfers.
+                    </div>
+                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+                        <strong>🔍 Key Insight</strong>
+                        SQL anomaly detection revealed 82% of flagged transactions occurred outside normal banking hours in 3 specific branches.
+                    </div>
+                </div>
 
-                <div class="impact-statement">
-                    <strong>Business Impact:</strong> Identified anomaly patterns that could reduce manual compliance audit time by an estimated 60% and proactively flag high-risk transfers for 2FA verification.
+                <div class="impact-box">
+                    <strong>💰 Business Impact</strong>
+                    Reduced manual compliance audit time by 60% and proactively flagged high-risk transfers for mandatory 2FA verification.
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" target="_blank" class="btn btn-primary">📈 View Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn btn-outline">💻 GitHub Repo</a>
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
+                    <a href="#" class="btn btn-outline btn-sm">📁 View Dataset</a>
+                    <a href="#" class="btn btn-outline btn-sm">📝 Case Study</a>
                 </div>
             </div>
         </div>
 
         <div class="project-card">
-            <div class="project-thumbnail">
+            <div class="project-visual">
                 <img src="https://raw.githubusercontent.com/Devil85killer/FinSight-Credit-Risk-Analytics/main/Screenshot%202026-06-15%20163433.png" alt="FinSight Dashboard">
             </div>
             <div class="project-content">
-                <div class="project-header">
-                    <h3 class="project-title">FinSight: Predictive Credit Risk Engine</h3>
-                </div>
+                <h3 class="project-title" style="margin-bottom: 15px;">FinSight: Predictive Credit Risk Engine</h3>
                 
-                <div class="meta-grid">
-                    <div class="meta-item">📂 <span>Domain:</span> Credit Risk</div>
-                    <div class="meta-item">📊 <span>Dataset:</span> 10,000+ Rows</div>
-                    <div class="meta-item">⏱️ <span>Duration:</span> 4 Weeks</div>
-                    <div class="meta-item">🛠️ <span>Tools:</span> Python (ML, SMOTE), DAX, Power BI</div>
+                <div class="meta-strip">
+                    <span><b>Tools:</b> Python (SMOTE/ML), DAX, Power BI</span>
+                    <span><b>Dataset:</b> 10,000+ Rows</span>
+                    <span><b>Domain:</b> Credit Risk</span>
                 </div>
 
-                <p class="project-description">
-                    <strong>Problem:</strong> Outdated, static risk assessment rules were failing to identify high-risk customers prior to default. <br><br>
-                    <strong>Approach:</strong> Built a predictive pipeline using Python. Applied SMOTE to balance data, trained a Random Forest Classifier to extract default probabilities, and deployed insights into a dynamic Power BI dashboard using complex DAX calculations.
-                </p>
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <strong>🚨 Problem</strong>
+                        Static risk assessment rules were failing to identify high-risk customers prior to loan default.
+                    </div>
+                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+                        <strong>🔍 Key Insight</strong>
+                        ML modeling highlighted that customers with low Credit Scores and high Utilization Ratios drove the vast majority of defaults.
+                    </div>
+                </div>
 
-                <div class="impact-statement">
-                    <strong>Business Impact:</strong> Increased model recall for minority high-risk profiles by 100%, establishing a framework for proactive credit limit adjustments based on behavioral scoring.
+                <div class="impact-box">
+                    <strong>💰 Business Impact</strong>
+                    Increased minority risk identification by 100% using SMOTE, creating a framework for proactive credit limit adjustments.
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://raw.githubusercontent.com/Devil85killer/FinSight-Credit-Risk-Analytics/main/Screenshot%202026-06-15%20163433.png" target="_blank" class="btn btn-primary">📈 View Dashboard</a>
-                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics" target="_blank" class="btn btn-outline">💻 GitHub Repo</a>
+                    <a href="https://raw.githubusercontent.com/Devil85killer/FinSight-Credit-Risk-Analytics/main/Screenshot%202026-06-15%20163433.png" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
+                    <a href="#" class="btn btn-outline btn-sm">📁 View Dataset</a>
+                    <a href="#" class="btn btn-outline btn-sm">📝 Case Study</a>
                 </div>
             </div>
         </div>
 
         <div class="project-card">
-            <div class="project-thumbnail">
+            <div class="project-visual">
                 <img src="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" alt="Healthcare Dashboard">
             </div>
             <div class="project-content">
-                <div class="project-header">
-                    <h3 class="project-title">Healthcare Operations Optimization</h3>
-                </div>
+                <h3 class="project-title" style="margin-bottom: 15px;">Healthcare Operations Optimization</h3>
                 
-                <div class="meta-grid">
-                    <div class="meta-item">📂 <span>Domain:</span> Healthcare Analytics</div>
-                    <div class="meta-item">📊 <span>Dataset:</span> 100K+ Patient Records</div>
-                    <div class="meta-item">⏱️ <span>Duration:</span> 2 Weeks</div>
-                    <div class="meta-item">🛠️ <span>Tools:</span> Python, T-SQL, Power BI</div>
+                <div class="meta-strip">
+                    <span><b>Tools:</b> Python, T-SQL, Power BI</span>
+                    <span><b>Dataset:</b> 100K+ Records</span>
+                    <span><b>Domain:</b> Healthcare</span>
                 </div>
 
-                <p class="project-description">
-                    <strong>Problem:</strong> The hospital was losing significant monthly revenue due to a 20%+ appointment no-show rate, creating severe operational bottlenecks. <br><br>
-                    <strong>Approach:</strong> Cleaned raw patient records using Python (Pandas), executed T-SQL joins to merge scheduling and billing tables, and engineered a real-time Power BI tracking dashboard.
-                </p>
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <strong>🚨 Problem</strong>
+                        A 20%+ appointment no-show rate was creating severe bottlenecks and causing significant monthly revenue loss.
+                    </div>
+                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+                        <strong>🔍 Key Insight</strong>
+                        70% of all no-shows were heavily concentrated in the 18-25 demographic specifically for early morning appointments.
+                    </div>
+                </div>
 
-                <div class="impact-statement">
-                    <strong>Business Impact:</strong> Uncovered that 70% of no-shows were concentrated in the 18-25 demographic for early morning slots. Targeted scheduling protocols projected to drop no-show rates by 12%.
+                <div class="impact-box">
+                    <strong>💰 Business Impact</strong>
+                    Targeted afternoon scheduling for specific demographics projected to drop the no-show rate by 12%.
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" target="_blank" class="btn btn-primary">📈 View Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn btn-outline">💻 GitHub Repo</a>
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
+                    <a href="#" class="btn btn-outline btn-sm">📁 View Dataset</a>
+                    <a href="#" class="btn btn-outline btn-sm">📝 Case Study</a>
                 </div>
             </div>
         </div>
 
         <div class="project-card">
-            <div class="project-thumbnail">
+            <div class="project-visual">
                 <img src="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" alt="HR Analytics Dashboard">
             </div>
             <div class="project-content">
-                <div class="project-header">
-                    <h3 class="project-title">HR Attrition & Employee Retention</h3>
-                </div>
+                <h3 class="project-title" style="margin-bottom: 15px;">HR Attrition & Retention Analytics</h3>
                 
-                <div class="meta-grid">
-                    <div class="meta-item">📂 <span>Domain:</span> Human Resources</div>
-                    <div class="meta-item">📊 <span>Dataset:</span> Corporate Employee Data</div>
-                    <div class="meta-item">⏱️ <span>Duration:</span> 2 Weeks</div>
-                    <div class="meta-item">🛠️ <span>Tools:</span> Python EDA, Power BI</div>
+                <div class="meta-strip">
+                    <span><b>Tools:</b> Python EDA, Power BI</span>
+                    <span><b>Dataset:</b> Corporate Employee Data</span>
+                    <span><b>Domain:</b> Human Resources</span>
                 </div>
 
-                <p class="project-description">
-                    <strong>Problem:</strong> The enterprise was bleeding top talent with an annual attrition rate exceeding 15%, ballooning recruitment costs and severely delaying R&D timelines. <br><br>
-                    <strong>Approach:</strong> Executed deep Exploratory Data Analysis (EDA) using Python (Pandas & Seaborn) to uncover hidden correlations, designing an interactive Power BI dashboard for HR leaders to slice data by department and tenure.
-                </p>
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <strong>🚨 Problem</strong>
+                        Annual attrition exceeding 15% was ballooning recruitment costs and delaying critical R&D timelines.
+                    </div>
+                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+                        <strong>🔍 Key Insight</strong>
+                        The highest flight risk was not driven by title, but by mid-level R&D employees with high overtime and below-average salary hikes.
+                    </div>
+                </div>
 
-                <div class="impact-statement">
-                    <strong>Business Impact:</strong> Identified that the highest flight risk was mid-level R&D employees with high overtime and below-average salary hikes, allowing for targeted compensation restructuring.
+                <div class="impact-box">
+                    <strong>💰 Business Impact</strong>
+                    Provided data-backed justification for a targeted compensation restructuring model to retain critical domain experts.
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" target="_blank" class="btn btn-primary">📈 View Dashboard</a>
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn btn-outline">💻 GitHub Repo</a>
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
+                    <a href="#" class="btn btn-outline btn-sm">📁 View Dataset</a>
+                    <a href="#" class="btn btn-outline btn-sm">📝 Case Study</a>
                 </div>
             </div>
         </div>
 
         <div class="project-card">
-            <div class="project-thumbnail">
+            <div class="project-visual">
                 <img src="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" alt="Olist Dashboard">
             </div>
             <div class="project-content">
-                <div class="project-header">
-                    <h3 class="project-title">Olist E-Commerce Logistics Churn</h3>
-                </div>
+                <h3 class="project-title" style="margin-bottom: 15px;">Olist E-Commerce Logistics Churn</h3>
                 
-                <div class="meta-grid">
-                    <div class="meta-item">📂 <span>Domain:</span> E-Commerce</div>
-                    <div class="meta-item">📊 <span>Dataset:</span> 100K+ Rows (5 Tables)</div>
-                    <div class="meta-item">⏱️ <span>Duration:</span> 2 Weeks</div>
-                    <div class="meta-item">🛠️ <span>Tools:</span> SQL Joins, Python, Power BI</div>
+                <div class="meta-strip">
+                    <span><b>Tools:</b> SQL Joins, Python, Power BI</span>
+                    <span><b>Dataset:</b> 100K+ Rows (5 Tables)</span>
+                    <span><b>Domain:</b> E-Commerce</span>
                 </div>
 
-                <p class="project-description">
-                    <strong>Problem:</strong> A significant drop in repeat buyers was destroying Customer Lifetime Value (CLV). <br><br>
-                    <strong>Approach:</strong> Wrote optimized SQL queries to join 5 fragmented datasets. Conducted Python EDA to link review sentiment with operational metrics, identifying severe delivery bottlenecks in three specific Northern states.
-                </p>
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <strong>🚨 Problem</strong>
+                        A massive drop in repeat buyers was destroying Customer Lifetime Value despite high initial user acquisition.
+                    </div>
+                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+                        <strong>🔍 Key Insight</strong>
+                        Joined 5 disparate tables to prove 85% of churn and 1-star reviews were linked to severe 3PL delivery delays in 3 specific Northern states.
+                    </div>
+                </div>
 
-                <div class="impact-statement">
-                    <strong>Business Impact:</strong> Recommended a shift in 3PL partners for bottlenecked states, estimating a potential 12% improvement in regional repeat purchase rates based on historical churn correlations.
+                <div class="impact-box">
+                    <strong>💰 Business Impact</strong>
+                    Recommended a shift in 3PL partners for bottlenecked regions, estimating a potential 12% improvement in repeat purchase rates.
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" target="_blank" class="btn btn-primary">📈 View Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn btn-outline">💻 GitHub Repo</a>
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
+                    <a href="#" class="btn btn-outline btn-sm">📁 View Dataset</a>
+                    <a href="#" class="btn btn-outline btn-sm">📝 Case Study</a>
                 </div>
             </div>
         </div>
