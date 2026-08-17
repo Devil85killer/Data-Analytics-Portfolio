@@ -255,6 +255,23 @@
             display: block;
         }
 
+        /* Customer 360 dashboard: show the complete dashboard without cropping */
+        .customer360-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #050812;
+            min-height: 320px;
+        }
+
+        .customer360-visual img {
+            width: 100%;
+            height: min(72vh, 760px);
+            max-height: none;
+            object-fit: contain;
+            object-position: center;
+        }
+
         .project-content {
             padding: 35px;
         }
@@ -366,6 +383,10 @@
 
             .project-title {
                 font-size: 1.4em;
+            }
+
+            .customer360-visual img {
+                height: 62vh;
             }
         }
     </style>
@@ -507,7 +528,118 @@
 
 
         <!-- ================================================= -->
-        <!-- PROJECT 1 -->
+        <!-- PROJECT 1 - CUSTOMER 360 -->
+        <!-- ================================================= -->
+
+        <div class="project-card flagship customer360-card">
+
+            <div class="project-visual customer360-visual">
+
+                <img
+                    src="https://raw.githubusercontent.com/Devil85killer/Customer-360-Financial-Analytics/main/outputs/Screenshot%202026-08-17%20150311.png"
+                    alt="Customer 360 Financial Analytics Dashboard">
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-header">
+
+                    <h3 class="project-title">
+                        Customer 360 – Financial Analytics
+                    </h3>
+
+                </div>
+
+                <div class="meta-strip">
+
+                    <span>
+                        <b>Tools:</b>
+                        SQL Server, Python, Machine Learning, Power BI, DAX
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        100,000 Customers
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        Banking, Credit Risk & Fraud
+                    </span>
+
+                </div>
+
+                <div class="brief-grid">
+
+                    <div class="brief-item">
+
+                        <strong>🚨 Problem</strong>
+
+                        Financial information was distributed across customer,
+                        banking, UPI, credit card and fraud datasets, making it
+                        difficult to create a unified customer-level credit risk view.
+
+                    </div>
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
+                        <strong>🔍 Key Insight</strong>
+
+                        Built a complete Customer 360 view of 100,000 customers
+                        combining financial behaviour, fraud indicators, credit
+                        scores and ML predictions to support credit decisions.
+
+                    </div>
+
+                </div>
+
+                <div class="impact-box">
+
+                    <strong>💰 Business Impact</strong>
+
+                    Created an end-to-end credit risk decision-support solution
+                    that identifies Eligible, Review Required and Not Eligible
+                    customers while recommending suitable credit limits.
+
+                </div>
+
+                <div class="project-actions">
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics/blob/main/outputs/Screenshot%202026-08-17%20150311.png"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics/tree/main/outputs"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Outputs
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 2 -->
         <!-- ================================================= -->
 
         <div class="project-card flagship">
@@ -610,8 +742,10 @@
         </div>
 
 
+
+
         <!-- ================================================= -->
-        <!-- PROJECT 2 -->
+        <!-- PROJECT 3 -->
         <!-- ================================================= -->
 
         <div class="project-card">
@@ -718,7 +852,7 @@
 
 
         <!-- ================================================= -->
-        <!-- PROJECT 3 -->
+        <!-- PROJECT 4 -->
         <!-- ================================================= -->
 
         <div class="project-card">
@@ -822,7 +956,7 @@
 
 
         <!-- ================================================= -->
-        <!-- PROJECT 4 -->
+        <!-- PROJECT 5 -->
         <!-- ================================================= -->
 
         <div class="project-card">
@@ -925,7 +1059,7 @@
 
 
         <!-- ================================================= -->
-        <!-- PROJECT 5 -->
+        <!-- PROJECT 6 -->
         <!-- ================================================= -->
 
         <div class="project-card">
@@ -1029,7 +1163,7 @@
 
 
         <!-- ================================================= -->
-        <!-- PROJECT 6 -->
+        <!-- PROJECT 7 -->
         <!-- ================================================= -->
 
         <div class="project-card">
@@ -1125,115 +1259,6 @@
             </div>
         </div>
 
-
-        <!-- ================================================= -->
-        <!-- PROJECT 7 - CUSTOMER 360 -->
-        <!-- ================================================= -->
-
-        <div class="project-card flagship">
-
-            <div class="project-visual">
-
-                <img
-                    src="https://raw.githubusercontent.com/Devil85killer/Customer-360-Financial-Analytics/main/outputs/Screenshot%202026-08-17%20150311.png"
-                    alt="Customer 360 Financial Analytics Dashboard">
-
-            </div>
-
-            <div class="project-content">
-
-                <div class="project-header">
-
-                    <h3 class="project-title">
-                        Customer 360 – Financial Analytics
-                    </h3>
-
-                </div>
-
-                <div class="meta-strip">
-
-                    <span>
-                        <b>Tools:</b>
-                        SQL Server, Python, Machine Learning, Power BI, DAX
-                    </span>
-
-                    <span>
-                        <b>Dataset:</b>
-                        100,000 Customers
-                    </span>
-
-                    <span>
-                        <b>Domain:</b>
-                        Banking, Credit Risk & Fraud
-                    </span>
-
-                </div>
-
-                <div class="brief-grid">
-
-                    <div class="brief-item">
-
-                        <strong>🚨 Problem</strong>
-
-                        Financial information was distributed across customer,
-                        banking, UPI, credit card and fraud datasets, making it
-                        difficult to create a unified customer-level credit risk view.
-
-                    </div>
-
-                    <div class="brief-item"
-                         style="border-left-color: var(--accent-cyan);">
-
-                        <strong>🔍 Key Insight</strong>
-
-                        Built a complete Customer 360 view of 100,000 customers
-                        combining financial behaviour, fraud indicators, credit
-                        scores and ML predictions to support credit decisions.
-
-                    </div>
-
-                </div>
-
-                <div class="impact-box">
-
-                    <strong>💰 Business Impact</strong>
-
-                    Created an end-to-end credit risk decision-support solution
-                    that identifies Eligible, Review Required and Not Eligible
-                    customers while recommending suitable credit limits.
-
-                </div>
-
-                <div class="project-actions">
-
-                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics/blob/main/outputs/Screenshot%202026-08-17%20150311.png"
-                       target="_blank"
-                       class="btn btn-primary btn-sm">
-                        📈 Live Dashboard
-                    </a>
-
-                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics"
-                       target="_blank"
-                       class="btn btn-outline btn-sm">
-                        💻 GitHub Repo
-                    </a>
-
-                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics/tree/main/outputs"
-                       target="_blank"
-                       class="btn btn-outline btn-sm">
-                        📁 View Outputs
-                    </a>
-
-                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics#readme"
-                       target="_blank"
-                       class="btn btn-outline btn-sm">
-                        📝 Case Study
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
 
     </div>
 
