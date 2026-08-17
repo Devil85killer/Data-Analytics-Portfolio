@@ -47,7 +47,12 @@
             box-sizing: border-box;
         }
 
-        .nav-logo { font-weight: 800; font-size: 1.2em; color: var(--text-main); text-decoration: none; }
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.2em;
+            color: var(--text-main);
+            text-decoration: none;
+        }
         
         /* Hero Section */
         header { 
@@ -69,405 +74,1177 @@
             border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
-        .profile-pic-container { display: flex; justify-content: center; margin-bottom: 20px; }
+        .profile-pic-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
         .profile-pic {
-            width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
             border: 3px solid var(--accent-purple);
             box-shadow: 0 0 25px rgba(137, 86, 255, 0.4);
         }
 
         header h1 { 
-            margin: 0 0 5px 0; font-size: 3.8em; font-weight: 900; 
+            margin: 0 0 5px 0;
+            font-size: 3.8em;
+            font-weight: 900; 
             background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             letter-spacing: -1.5px;
         }
 
-        header p.title { font-size: 1.2em; color: var(--text-muted); font-weight: 500; margin: 0 0 25px 0; }
+        header p.title {
+            font-size: 1.2em;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin: 0 0 25px 0;
+        }
 
         /* High-Impact Metrics */
         .hero-metrics {
-            display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
         }
+
         .metric-pill {
-            background: rgba(255,255,255,0.05); border: 1px solid var(--border-color);
-            padding: 8px 16px; border-radius: 8px; font-size: 0.9em; font-weight: 600; color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: var(--text-main);
         }
-        .metric-pill span { color: var(--accent-cyan); }
+
+        .metric-pill span {
+            color: var(--accent-cyan);
+        }
 
         /* Hero Buttons */
-        .hero-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-
-        .btn {
-            padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95em;
-            text-decoration: none; transition: all 0.3s ease; text-align: center;
-            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .btn-primary { background: linear-gradient(90deg, #16aee8, #5345ff); color: white; border: none; }
-        .btn-primary:hover { box-shadow: 0 4px 15px rgba(83, 69, 255, 0.5); transform: translateY(-2px); }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
 
-        .btn-outline { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); }
-        .btn-outline:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+        .btn-primary {
+            background: linear-gradient(90deg, #16aee8, #5345ff);
+            color: white;
+            border: none;
+        }
 
-        .btn-sm { padding: 8px 16px; font-size: 0.85em; }
+        .btn-primary:hover {
+            box-shadow: 0 4px 15px rgba(83, 69, 255, 0.5);
+            transform: translateY(-2px);
+        }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .btn-outline {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.85em;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
 
         .section-title { 
-            color: var(--text-main); font-size: 2.2em; text-align: center; 
-            margin-bottom: 40px; font-weight: 800; letter-spacing: -0.5px;
+            color: var(--text-main);
+            font-size: 2.2em;
+            text-align: center; 
+            margin-bottom: 40px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         /* What I Can Do Section */
         .skills-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;
-            background: var(--bg-card); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
             margin-bottom: 60px;
         }
-        .skill-item { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--text-main); }
-        .skill-item span { color: var(--success-green); font-size: 1.2em; }
 
-        /* Project Cards - Image First, Text Second */
-        .project-card {
-            background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border-color);
-            overflow: hidden; margin-bottom: 60px; transition: transform 0.3s ease;
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--text-main);
         }
-        .project-card:hover { border-color: rgba(0, 255, 255, 0.3); background: var(--bg-card-hover); }
 
-        .flagship { border: 1px solid var(--accent-purple); box-shadow: 0 10px 40px rgba(137, 86, 255, 0.15); }
+        .skill-item span {
+            color: var(--success-green);
+            font-size: 1.2em;
+        }
 
-        /* Massive Dashboard Images */
-        .project-visual { width: 100%; border-bottom: 1px solid var(--border-color); background: #000; overflow: hidden; }
-        .project-visual img { width: 100%; height: auto; max-height: 550px; object-fit: cover; object-position: top; display: block; }
+        /* Project Cards */
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            margin-bottom: 60px;
+            transition: transform 0.3s ease;
+        }
 
-        .project-content { padding: 35px; }
+        .project-card:hover {
+            border-color: rgba(0, 255, 255, 0.3);
+            background: var(--bg-card-hover);
+        }
 
-        .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;}
-        .project-title { font-size: 1.8em; font-weight: 800; margin: 0; color: #fff; }
+        .flagship {
+            border: 1px solid var(--accent-purple);
+            box-shadow: 0 10px 40px rgba(137, 86, 255, 0.15);
+        }
+
+        /* Dashboard Images */
+        .project-visual {
+            width: 100%;
+            border-bottom: 1px solid var(--border-color);
+            background: #000;
+            overflow: hidden;
+        }
+
+        .project-visual img {
+            width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+
+        .project-content {
+            padding: 35px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 1.8em;
+            font-weight: 800;
+            margin: 0;
+            color: #fff;
+        }
 
         /* Condensed Meta Data */
         .meta-strip {
-            display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;
-            font-size: 0.85em; font-weight: 600; color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: var(--text-muted);
         }
-        .meta-strip span { background: rgba(0,0,0,0.3); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.05); }
-        .meta-strip span b { color: var(--accent-cyan); font-weight: 700; }
+
+        .meta-strip span {
+            background: rgba(0,0,0,0.3);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .meta-strip span b {
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
 
         /* Condensed Text Layout */
-        .brief-grid { display: grid; gap: 15px; margin-bottom: 25px; font-size: 0.95em; color: var(--text-muted); }
-        .brief-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border-left: 3px solid var(--border-color); }
-        .brief-item strong { color: var(--text-main); display: block; margin-bottom: 4px; font-size: 1.05em; }
+        .brief-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 0.95em;
+            color: var(--text-muted);
+        }
+
+        .brief-item {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--border-color);
+        }
+
+        .brief-item strong {
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.05em;
+        }
 
         .impact-box {
-            background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--success-green);
-            padding: 15px; border-radius: 8px; color: #fff; font-size: 0.95em;
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 3px solid var(--success-green);
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.95em;
         }
-        .impact-box strong { color: var(--success-green); font-size: 1.05em; display: block; margin-bottom: 4px;}
 
-        /* 4 Button Layout */
-        .project-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 30px; }
+        .impact-box strong {
+            color: var(--success-green);
+            font-size: 1.05em;
+            display: block;
+            margin-bottom: 4px;
+        }
 
-        footer { text-align: center; padding: 40px; background: var(--bg-main); color: #64748b; font-size: 0.9em; border-top: 1px solid var(--border-color); }
+        /* Button Layout */
+        .project-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--bg-main);
+            color: #64748b;
+            font-size: 0.9em;
+            border-top: 1px solid var(--border-color);
+        }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.8em; }
-            .hero-metrics { flex-direction: column; align-items: center; }
-            .project-title { font-size: 1.4em; }
+            header h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-metrics {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-title {
+                font-size: 1.4em;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- NAVBAR -->
     <nav>
         <a href="#" class="nav-logo">JS.</a>
+
         <div>
-            <a href="https://github.com/Devil85killer" target="_blank" style="color:#fff; text-decoration:none; font-weight:600;">GitHub</a>
+            <a href="https://github.com/Devil85killer"
+               target="_blank"
+               style="color:#fff; text-decoration:none; font-weight:600;">
+                GitHub
+            </a>
         </div>
     </nav>
 
+
+    <!-- HERO -->
     <header>
-        <div class="status-badge">🟢 Open to Data Analyst Roles</div>
-        
+
+        <div class="status-badge">
+            🟢 Open to Data Analyst Roles
+        </div>
+
         <div class="profile-pic-container">
-            <img src="profile.jpg" alt="Jogesh Sahu Profile" class="profile-pic">
+            <img src="profile.jpg"
+                 alt="Jogesh Sahu Profile"
+                 class="profile-pic">
         </div>
 
         <h1>Jogesh Sahu</h1>
-        <p class="title">Data Analyst | Transform Data Into Decisions</p>
-        
+
+        <p class="title">
+            Data Analyst | Transform Data Into Decisions
+        </p>
+
         <div class="hero-metrics">
-            <div class="metric-pill"><span>🚀</span> 6 Analytics Projects</div>
-            <div class="metric-pill"><span>💻</span> SQL • Python • Power BI • SAS • Alteryx • Excel • Machine Learning</div>
-            <div class="metric-pill"><span>📊</span> 1M+ Rows Analyzed</div>
-            <div class="metric-pill"><span>📈</span> Interactive Dashboards</div>
+
+            <!-- UPDATED 6 → 7 -->
+            <div class="metric-pill">
+                <span>🚀</span> 7 Analytics Projects
+            </div>
+
+            <div class="metric-pill">
+                <span>💻</span>
+                SQL • Python • Power BI • SAS • Alteryx • Excel • Machine Learning
+            </div>
+
+            <div class="metric-pill">
+                <span>📊</span> 1M+ Rows Analyzed
+            </div>
+
+            <div class="metric-pill">
+                <span>📈</span> Interactive Dashboards
+            </div>
+
         </div>
-        
+
         <div class="hero-btns">
-            <a href="https://drive.google.com/file/d/10yfmhbngMwPiOHbRS_q0qKcqQLkdvEWQ/view?usp=sharing" target="_blank" class="btn btn-primary">📄 View Resume</a>
-            <a href="https://github.com/Devil85killer" target="_blank" class="btn btn-outline">💻 GitHub</a>
-            <a href="https://www.linkedin.com/in/jogesh-sahu-360377260" target="_blank" class="btn btn-outline">🔗 LinkedIn</a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahujogesh143@gmail.com" target="_blank" class="btn btn-outline">✉️ Contact Me</a>
+
+            <a href="https://drive.google.com/file/d/10yfmhbngMwPiOHbRS_q0qKcqQLkdvEWQ/view?usp=sharing"
+               target="_blank"
+               class="btn btn-primary">
+                📄 View Resume
+            </a>
+
+            <a href="https://github.com/Devil85killer"
+               target="_blank"
+               class="btn btn-outline">
+                💻 GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/jogesh-sahu-360377260"
+               target="_blank"
+               class="btn btn-outline">
+                🔗 LinkedIn
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahujogesh143@gmail.com"
+               target="_blank"
+               class="btn btn-outline">
+                ✉️ Contact Me
+            </a>
+
         </div>
+
     </header>
 
+
+    <!-- MAIN CONTENT -->
     <div class="container">
-        
-        <h2 class="section-title">What I Can Do</h2>
+
+        <h2 class="section-title">
+            What I Can Do
+        </h2>
+
         <div class="skills-grid">
-            <div class="skill-item"><span>✓</span> SQL Data Analysis</div>
-            <div class="skill-item"><span>✓</span> Dashboard Development</div>
-            <div class="skill-item"><span>✓</span> Data Cleaning & ETL (Alteryx/SAS)</div>
-            <div class="skill-item"><span>✓</span> Exploratory Data Analysis</div>
-            <div class="skill-item"><span>✓</span> Business Insights & Excel Modeling</div>
-            <div class="skill-item"><span>✓</span> Predictive Analytics & Machine Learning</div>
+
+            <div class="skill-item">
+                <span>✓</span>
+                SQL Data Analysis
+            </div>
+
+            <div class="skill-item">
+                <span>✓</span>
+                Dashboard Development
+            </div>
+
+            <div class="skill-item">
+                <span>✓</span>
+                Data Cleaning & ETL (Alteryx/SAS)
+            </div>
+
+            <div class="skill-item">
+                <span>✓</span>
+                Exploratory Data Analysis
+            </div>
+
+            <div class="skill-item">
+                <span>✓</span>
+                Business Insights & Excel Modeling
+            </div>
+
+            <div class="skill-item">
+                <span>✓</span>
+                Predictive Analytics & Machine Learning
+            </div>
+
         </div>
 
-        <h2 class="section-title">Case Studies & Projects</h2>
 
-        <!-- Flagship Project: E-Commerce Churn Intelligence -->
+        <h2 class="section-title">
+            Case Studies & Projects
+        </h2>
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 1 -->
+        <!-- ================================================= -->
+
         <div class="project-card flagship">
+
             <div class="project-visual">
-                <img src="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics/blob/main/dashboard_preview.png?raw=true" alt="E-Commerce Churn Dashboard">
+                <img
+                    src="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics/blob/main/dashboard_preview.png?raw=true"
+                    alt="E-Commerce Churn Dashboard">
             </div>
-            
+
             <div class="project-content">
+
                 <div class="project-header">
-                    <h3 class="project-title">E-Commerce Predictive Customer Churn Analytics</h3>
+                    <h3 class="project-title">
+                        E-Commerce Predictive Customer Churn Analytics
+                    </h3>
                 </div>
-                
+
                 <div class="meta-strip">
-                    <span><b>Tools:</b> Power BI, Python (ML), SQL, DAX</span>
-                    <span><b>Dataset:</b> 56,000+ Customers</span>
-                    <span><b>Domain:</b> E-Commerce & Risk</span>
+
+                    <span>
+                        <b>Tools:</b>
+                        Power BI, Python (ML), SQL, DAX
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        56,000+ Customers
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        E-Commerce & Risk
+                    </span>
+
                 </div>
 
                 <div class="brief-grid">
+
                     <div class="brief-item">
+
                         <strong>🚨 Problem</strong>
-                        High customer attrition and reactive retention strategies were putting $6.98M in customer revenue at risk.
+
+                        High customer attrition and reactive retention strategies
+                        were putting $6.98M in customer revenue at risk.
+
                     </div>
-                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
                         <strong>🔍 Key Insight</strong>
-                        Identified that 75.16% overall churn risk was concentrated among high-monetary customers requiring urgent segmentation and intervention.
+
+                        Identified that 75.16% overall churn risk was concentrated
+                        among high-monetary customers requiring urgent segmentation
+                        and intervention.
+
                     </div>
+
                 </div>
 
                 <div class="impact-box">
+
                     <strong>💰 Business Impact</strong>
-                    Created an actionable Power BI dashboard with a target action list to protect revenue at risk and optimize retention marketing.
+
+                    Created an actionable Power BI dashboard with a target action
+                    list to protect revenue at risk and optimize retention marketing.
+
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
-                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
-                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics/tree/main/data" target="_blank" class="btn btn-outline btn-sm">📁 View Dataset</a>
-                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics#readme" target="_blank" class="btn btn-outline btn-sm">📝 Case Study</a>
+
+                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics/tree/main/data"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Dataset
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/E-Commerce-Predictive-Customer-Churn-Analytics#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
                 </div>
+
             </div>
         </div>
 
-        <!-- Project 2 -->
+
+        <!-- ================================================= -->
+        <!-- PROJECT 2 -->
+        <!-- ================================================= -->
+
         <div class="project-card">
+
             <div class="project-visual">
-                <img src="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" alt="Banking Dashboard">
+
+                <img
+                    src="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true"
+                    alt="Banking Dashboard">
+
             </div>
-            
+
             <div class="project-content">
+
                 <div class="project-header">
-                    <h3 class="project-title">Banking Audit & Fraud Detection System</h3>
+
+                    <h3 class="project-title">
+                        Banking Audit & Fraud Detection System
+                    </h3>
+
                 </div>
-                
+
                 <div class="meta-strip">
-                    <span><b>Tools:</b> Advanced SQL, Power BI</span>
-                    <span><b>Dataset:</b> 500K+ Rows</span>
-                    <span><b>Domain:</b> Banking & Risk</span>
+
+                    <span>
+                        <b>Tools:</b>
+                        Advanced SQL, Power BI
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        500K+ Rows
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        Banking & Risk
+                    </span>
+
                 </div>
 
                 <div class="brief-grid">
+
                     <div class="brief-item">
+
                         <strong>🚨 Problem</strong>
-                        Manual audit of 500K+ transaction logs created a reactive environment vulnerable to rapid fraudulent transfers.
+
+                        Manual audit of 500K+ transaction logs created a reactive
+                        environment vulnerable to rapid fraudulent transfers.
+
                     </div>
-                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
                         <strong>🔍 Key Insight</strong>
-                        SQL anomaly detection revealed 82% of flagged transactions occurred outside normal banking hours in 3 specific branches.
+
+                        SQL anomaly detection revealed 82% of flagged transactions
+                        occurred outside normal banking hours in 3 specific branches.
+
                     </div>
+
                 </div>
 
                 <div class="impact-box">
+
                     <strong>💰 Business Impact</strong>
-                    Reduced manual compliance audit time by 60% and proactively flagged high-risk transfers for mandatory 2FA verification.
+
+                    Reduced manual compliance audit time by 60% and proactively
+                    flagged high-risk transfers for mandatory 2FA verification.
+
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/synthetic_fraud_dataset.csv" target="_blank" class="btn btn-outline btn-sm">📁 View Dataset</a>
-                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL#readme" target="_blank" class="btn btn-outline btn-sm">📝 Case Study</a>
+
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/Screenshot%202026-03-22%20003142.png?raw=true"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL/blob/main/Banking_Audit_Project/synthetic_fraud_dataset.csv"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Dataset
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Banking-Transaction-Audit-PowerBI-SQL#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
                 </div>
+
             </div>
         </div>
 
-        <!-- Project 3 -->
+
+        <!-- ================================================= -->
+        <!-- PROJECT 3 -->
+        <!-- ================================================= -->
+
         <div class="project-card">
+
             <div class="project-visual">
-                <img src="https://raw.githubusercontent.com/Devil85killer/FinSight-Credit-Risk-Analytics/main/Screenshot%202026-06-15%20163433.png" alt="FinSight Dashboard">
+
+                <img
+                    src="https://raw.githubusercontent.com/Devil85killer/FinSight-Credit-Risk-Analytics/main/Screenshot%202026-06-15%20163433.png"
+                    alt="FinSight Dashboard">
+
             </div>
+
             <div class="project-content">
-                <h3 class="project-title" style="margin-bottom: 15px;">FinSight: Predictive Credit Risk Engine</h3>
-                
+
+                <h3 class="project-title" style="margin-bottom: 15px;">
+                    FinSight: Predictive Credit Risk Engine
+                </h3>
+
                 <div class="meta-strip">
-                    <span><b>Tools:</b> Python (SMOTE/ML), DAX, Power BI</span>
-                    <span><b>Dataset:</b> 10,000+ Rows</span>
-                    <span><b>Domain:</b> Credit Risk</span>
+
+                    <span>
+                        <b>Tools:</b>
+                        Python (SMOTE/ML), DAX, Power BI
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        10,000+ Rows
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        Credit Risk
+                    </span>
+
                 </div>
 
                 <div class="brief-grid">
+
                     <div class="brief-item">
+
                         <strong>🚨 Problem</strong>
-                        Static risk assessment rules were failing to identify high-risk customers prior to loan default.
+
+                        Static risk assessment rules were failing to identify
+                        high-risk customers prior to loan default.
+
                     </div>
-                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
                         <strong>🔍 Key Insight</strong>
-                        ML modeling highlighted that customers with low Credit Scores and high Utilization Ratios drove the vast majority of defaults.
+
+                        ML modeling highlighted that customers with low Credit
+                        Scores and high Utilization Ratios drove the vast majority
+                        of defaults.
+
                     </div>
+
                 </div>
 
                 <div class="impact-box">
+
                     <strong>💰 Business Impact</strong>
-                    Increased minority risk identification by 100% using SMOTE, creating a framework for proactive credit limit adjustments.
+
+                    Increased minority risk identification by 100% using SMOTE,
+                    creating a framework for proactive credit limit adjustments.
+
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
-                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
-                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics/blob/main/Credit_Card_Dataset.csv" target="_blank" class="btn btn-outline btn-sm">📁 View Dataset</a>
-                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics#readme" target="_blank" class="btn btn-outline btn-sm">📝 Case Study</a>
+
+                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics/blob/main/Credit_Card_Dataset.csv"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Dataset
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/FinSight-Credit-Risk-Analytics#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
                 </div>
+
             </div>
         </div>
 
-        <!-- Project 4 -->
+
+        <!-- ================================================= -->
+        <!-- PROJECT 4 -->
+        <!-- ================================================= -->
+
         <div class="project-card">
+
             <div class="project-visual">
-                <img src="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" alt="Healthcare Dashboard">
+
+                <img
+                    src="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true"
+                    alt="Healthcare Dashboard">
+
             </div>
+
             <div class="project-content">
-                <h3 class="project-title" style="margin-bottom: 15px;">Healthcare Operations Optimization</h3>
-                
+
+                <h3 class="project-title" style="margin-bottom: 15px;">
+                    Healthcare Operations Optimization
+                </h3>
+
                 <div class="meta-strip">
-                    <span><b>Tools:</b> Python, T-SQL, Power BI</span>
-                    <span><b>Dataset:</b> 100K+ Records</span>
-                    <span><b>Domain:</b> Healthcare</span>
+
+                    <span>
+                        <b>Tools:</b>
+                        Python, T-SQL, Power BI
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        100K+ Records
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        Healthcare
+                    </span>
+
                 </div>
 
                 <div class="brief-grid">
+
                     <div class="brief-item">
+
                         <strong>🚨 Problem</strong>
-                        A 20%+ appointment no-show rate was creating severe bottlenecks and causing significant monthly revenue loss.
+
+                        A 20%+ appointment no-show rate was creating severe
+                        bottlenecks and causing significant monthly revenue loss.
+
                     </div>
-                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
                         <strong>🔍 Key Insight</strong>
-                        70% of all no-shows were heavily concentrated in the 18-25 demographic specifically for early morning appointments.
+
+                        70% of all no-shows were heavily concentrated in the
+                        18-25 demographic specifically for early morning appointments.
+
                     </div>
+
                 </div>
 
                 <div class="impact-box">
+
                     <strong>💰 Business Impact</strong>
-                    Targeted afternoon scheduling for specific demographics projected to drop the no-show rate by 12%.
+
+                    Targeted afternoon scheduling for specific demographics
+                    projected to drop the no-show rate by 12%.
+
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
-                   <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI" target="_blank" class="btn btn-outline btn-sm">📁 View Dataset</a>
-                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI#readme" target="_blank" class="btn btn-outline btn-sm">📝 Case Study</a>
+
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI/blob/main/Screenshot%202026-03-30%20040131.png?raw=true"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Dataset
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Healthcare-Operations-Analytics-PowerBI#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
                 </div>
+
             </div>
         </div>
 
-        <!-- Project 5 -->
+
+        <!-- ================================================= -->
+        <!-- PROJECT 5 -->
+        <!-- ================================================= -->
+
         <div class="project-card">
+
             <div class="project-visual">
-                <img src="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" alt="HR Analytics Dashboard">
+
+                <img
+                    src="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true"
+                    alt="HR Analytics Dashboard">
+
             </div>
+
             <div class="project-content">
-                <h3 class="project-title" style="margin-bottom: 15px;">HR Attrition & Retention Analytics</h3>
-                
+
+                <h3 class="project-title" style="margin-bottom: 15px;">
+                    HR Attrition & Retention Analytics
+                </h3>
+
                 <div class="meta-strip">
-                    <span><b>Tools:</b> Python EDA, Power BI</span>
-                    <span><b>Dataset:</b> Corporate Employee Data</span>
-                    <span><b>Domain:</b> Human Resources</span>
+
+                    <span>
+                        <b>Tools:</b>
+                        Python EDA, Power BI
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        Corporate Employee Data
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        Human Resources
+                    </span>
+
                 </div>
 
                 <div class="brief-grid">
+
                     <div class="brief-item">
+
                         <strong>🚨 Problem</strong>
-                        Annual attrition exceeding 15% was ballooning recruitment costs and delaying critical R&D timelines.
+
+                        Annual attrition exceeding 15% was ballooning recruitment
+                        costs and delaying critical R&D timelines.
+
                     </div>
-                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
                         <strong>🔍 Key Insight</strong>
-                        The highest flight risk was not driven by title, but by mid-level R&D employees with high overtime and below-average salary hikes.
+
+                        The highest flight risk was not driven by title, but by
+                        mid-level R&D employees with high overtime and below-average
+                        salary hikes.
+
                     </div>
+
                 </div>
 
                 <div class="impact-box">
+
                     <strong>💰 Business Impact</strong>
-                    Provided data-backed justification for a targeted compensation restructuring model to retain critical domain experts.
+
+                    Provided data-backed justification for a targeted compensation
+                    restructuring model to retain critical domain experts.
+
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
-                   <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/HR_Project/WA_Fn-UseC_-HR-Employee-Attrition.csv" target="_blank" class="btn btn-outline btn-sm">📁 View Dataset</a>
-                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics#readme" target="_blank" class="btn btn-outline btn-sm">📝 Case Study</a>
+
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/hr_analysis.png?raw=true"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics/blob/main/HR_Project/WA_Fn-UseC_-HR-Employee-Attrition.csv"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Dataset
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/HR-Attrition-Data-Analytics#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
                 </div>
+
             </div>
         </div>
 
-        <!-- Project 6 -->
+
+        <!-- ================================================= -->
+        <!-- PROJECT 6 -->
+        <!-- ================================================= -->
+
         <div class="project-card">
+
             <div class="project-visual">
-                <img src="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" alt="Olist Dashboard">
+
+                <img
+                    src="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true"
+                    alt="Olist Dashboard">
+
             </div>
+
             <div class="project-content">
-                <h3 class="project-title" style="margin-bottom: 15px;">Olist E-Commerce Logistics Churn</h3>
-                
+
+                <h3 class="project-title" style="margin-bottom: 15px;">
+                    Olist E-Commerce Logistics Churn
+                </h3>
+
                 <div class="meta-strip">
-                    <span><b>Tools:</b> SQL Joins, Python, Power BI</span>
-                    <span><b>Dataset:</b> 100K+ Rows (5 Tables)</span>
-                    <span><b>Domain:</b> E-Commerce</span>
+
+                    <span>
+                        <b>Tools:</b>
+                        SQL Joins, Python, Power BI
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        100K+ Rows (5 Tables)
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        E-Commerce
+                    </span>
+
                 </div>
 
                 <div class="brief-grid">
+
                     <div class="brief-item">
+
                         <strong>🚨 Problem</strong>
-                        A massive drop in repeat buyers was destroying Customer Lifetime Value despite high initial user acquisition.
+
+                        A massive drop in repeat buyers was destroying Customer
+                        Lifetime Value despite high initial user acquisition.
+
                     </div>
-                    <div class="brief-item" style="border-left-color: var(--accent-cyan);">
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
                         <strong>🔍 Key Insight</strong>
-                        Joined 5 disparate tables to prove 85% of churn and 1-star reviews were linked to severe 3PL delivery delays in 3 specific Northern states.
+
+                        Joined 5 disparate tables to prove 85% of churn and
+                        1-star reviews were linked to severe 3PL delivery delays
+                        in 3 specific Northern states.
+
                     </div>
+
                 </div>
 
                 <div class="impact-box">
+
                     <strong>💰 Business Impact</strong>
-                    Recommended a shift in 3PL partners for bottlenecked regions, estimating a potential 12% improvement in repeat purchase rates.
+
+                    Recommended a shift in 3PL partners for bottlenecked regions,
+                    estimating a potential 12% improvement in repeat purchase rates.
+
                 </div>
 
                 <div class="project-actions">
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true" target="_blank" class="btn btn-primary btn-sm">📈 Live Dashboard</a>
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio" target="_blank" class="btn btn-outline btn-sm">💻 GitHub Repo</a>
-                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio#readme" target="_blank" class="btn btn-outline btn-sm">📝 Case Study</a>
+
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio/blob/main/Screenshot%202026-03-30%20051856.png?raw=true"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Data-Analytics-Portfolio#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
                 </div>
+
+            </div>
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT 7 - CUSTOMER 360 -->
+        <!-- ================================================= -->
+
+        <div class="project-card flagship">
+
+            <div class="project-visual">
+
+                <img
+                    src="https://raw.githubusercontent.com/Devil85killer/Customer-360-Financial-Analytics/main/outputs/Screenshot%202026-08-17%20150311.png"
+                    alt="Customer 360 Financial Analytics Dashboard">
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-header">
+
+                    <h3 class="project-title">
+                        Customer 360 – Financial Analytics
+                    </h3>
+
+                </div>
+
+                <div class="meta-strip">
+
+                    <span>
+                        <b>Tools:</b>
+                        SQL Server, Python, Machine Learning, Power BI, DAX
+                    </span>
+
+                    <span>
+                        <b>Dataset:</b>
+                        100,000 Customers
+                    </span>
+
+                    <span>
+                        <b>Domain:</b>
+                        Banking, Credit Risk & Fraud
+                    </span>
+
+                </div>
+
+                <div class="brief-grid">
+
+                    <div class="brief-item">
+
+                        <strong>🚨 Problem</strong>
+
+                        Financial information was distributed across customer,
+                        banking, UPI, credit card and fraud datasets, making it
+                        difficult to create a unified customer-level credit risk view.
+
+                    </div>
+
+                    <div class="brief-item"
+                         style="border-left-color: var(--accent-cyan);">
+
+                        <strong>🔍 Key Insight</strong>
+
+                        Built a complete Customer 360 view of 100,000 customers
+                        combining financial behaviour, fraud indicators, credit
+                        scores and ML predictions to support credit decisions.
+
+                    </div>
+
+                </div>
+
+                <div class="impact-box">
+
+                    <strong>💰 Business Impact</strong>
+
+                    Created an end-to-end credit risk decision-support solution
+                    that identifies Eligible, Review Required and Not Eligible
+                    customers while recommending suitable credit limits.
+
+                </div>
+
+                <div class="project-actions">
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics/blob/main/outputs/Screenshot%202026-08-17%20150311.png"
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
+                        📈 Live Dashboard
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        💻 GitHub Repo
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics/tree/main/outputs"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📁 View Outputs
+                    </a>
+
+                    <a href="https://github.com/Devil85killer/Customer-360-Financial-Analytics#readme"
+                       target="_blank"
+                       class="btn btn-outline btn-sm">
+                        📝 Case Study
+                    </a>
+
+                </div>
+
             </div>
         </div>
 
     </div>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Jogesh Sahu | Data Analyst Portfolio</p>
+
+        <p>
+            &copy; 2026 Jogesh Sahu | Data Analyst Portfolio
+        </p>
+
     </footer>
 
 </body>
