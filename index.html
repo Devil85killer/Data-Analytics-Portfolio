@@ -217,6 +217,66 @@
             color: var(--success-green);
             font-size: 1.2em;
         }
+        
+        /* Experience Section */
+        .experience-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 35px;
+            margin-bottom: 60px;
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(0, 255, 255, 0.3);
+            border-left: 4px solid var(--accent-cyan);
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .exp-role {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: #fff;
+            margin: 0;
+        }
+        
+        .exp-duration {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.95em;
+            background: rgba(0, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        
+        .exp-company {
+            font-size: 1.1em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .exp-list {
+            color: var(--text-muted);
+            line-height: 1.7;
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        .exp-list li {
+            margin-bottom: 10px;
+        }
 
         /* Project Cards */
         .project-card {
@@ -416,7 +476,7 @@
         </div>
 
         <div class="profile-pic-container">
-            <img src="profile.jpg"
+            <img src="WhatsApp Image 2026-10-09 at 9.36.14 AM.jpeg "
                  alt="Jogesh Sahu Profile"
                  class="profile-pic">
         </div>
@@ -428,8 +488,12 @@
         </p>
 
         <div class="hero-metrics">
+        
+            <!-- ADDED EXPERIENCE PILL HERE -->
+            <div class="metric-pill">
+                <span>💼</span> 2 Years Experience
+            </div>
 
-            <!-- UPDATED 6 → 7 -->
             <div class="metric-pill">
                 <span>🚀</span> 7 Analytics Projects
             </div>
@@ -451,7 +515,7 @@
 
         <div class="hero-btns">
 
-            <!-- YAHAN TUMHARA NAYA DRIVE LINK HAI -->
+            <!-- DRIVE LINK IS ALREADY UPDATED HERE -->
             <a href="https://drive.google.com/file/d/1PhTczTaaT5_WdIaRg6aWT9Fz0kHjsgDa/view?usp=sharing"
                target="_blank"
                class="btn btn-primary">
@@ -470,7 +534,7 @@
                 🔗 LinkedIn
             </a>
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahujogesh2005@gmail.com"
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sahujogesh143@gmail.com"
                target="_blank"
                class="btn btn-outline">
                 ✉️ Contact Me
@@ -520,6 +584,29 @@
                 Predictive Analytics & Machine Learning
             </div>
 
+        </div>
+        
+        <!-- ================================================= -->
+        <!-- PROFESSIONAL EXPERIENCE SECTION ADDED HERE -->
+        <!-- ================================================= -->
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+        
+        <div class="experience-card">
+            <div class="exp-header">
+                <h3 class="exp-role">Data Analyst</h3>
+                <span class="exp-duration">Nov 2024 - Present</span>
+            </div>
+            <div class="exp-company">Queensland Country Bank | Banking Credit Risk</div>
+            
+            <ul class="exp-list">
+                <li>Analyzed credit card portfolio performance using <strong>SQL, Python and SAS</strong>, covering 30/60/90+ DPD, delinquency, and roll rates.</li>
+                <li>Developed complex SQL queries for data extraction, transformation, joins and analysis across customer, transaction and repayment datasets.</li>
+                <li>Performed customer segmentation and risk profiling using credit score, utilization, outstanding balance and repayment behavior.</li>
+                <li>Developed <strong>Power BI</strong> dashboards for portfolio performance, credit risk KPIs, delinquency, segmentation and vintage analysis.</li>
+                <li>Automated MIS, data validation and reporting workflows using SQL and Python, improving reporting efficiency.</li>
+            </ul>
         </div>
 
 
